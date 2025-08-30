@@ -1,0 +1,61 @@
+# ---- C++ build files ----
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.out
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# ---- Debug files ----
+*.dSYM/
+*.stackdump
+*.core
+*.pdb
+*.idb
+
+# ---- Build directories ----
+/build/
+/bin/
+/lib/
+/dist/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+/*.make
+
+# ---- Logs ----
+*.log
+
+# ---- Editor / IDE files ----
+# VSCode
+.vscode/
+*.code-workspace
+
+# CLion / JetBrains
+.idea/
+
+# Eclipse
+.project
+.cproject
+.settings/
+
+# Visual Studio
+*.vcxproj*
+*.sln
+*.user
+*.aps
+*.ncb
+*.opendb
+*.suo
+*.cachefile
+
+# ---- OS junk files ----
+.DS_Store
+Thumbs.db
