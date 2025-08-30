@@ -37,6 +37,7 @@
 # VSCode
 .vscode/
 *.code-workspace
+.cache
 
 # CLion / JetBrains
 .idea/
