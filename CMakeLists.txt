@@ -47,10 +47,7 @@ include(CPack)
 
 # Born to use PkgConfig, forced to use find_package.
 find_package(Eigen3 REQUIRED)
-
-find_package(OpenCV REQUIRED
-    COMPONENTS core imgproc highgui features2d video
-)
+find_package(OpenCV REQUIRED)
 
 # (Optional) OpenEXR via find_package
 find_package(OpenEXR QUIET)
