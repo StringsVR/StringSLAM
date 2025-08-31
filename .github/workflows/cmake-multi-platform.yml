@@ -17,28 +17,37 @@ jobs:
         build_type: [Debug, Release]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Set build directory
-        id: vars
-        run: echo "BUILD_DIR=${{ github.workspace }}/build" >> $GITHUB_ENV
+      - name: Set up CMake
+        uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: '4.1.1'
 
-      - name: Configure CMake
-        shell: bash
+      # Linux Dependencies
+      - name: Install Dependencies (Linux)
+        if: runner.os == 'Linux'
         run: |
-          cmake -B "$BUILD_DIR" -S "$GITHUB_WORKSPACE" \
-            -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+          sudo apt-get update
+          sudo apt-get install -y pkg-config libopencv-dev libeigen3-dev libopenexr-dev
 
+      # Windows Dependencies
+      - name: Install Dependencies (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          choco install opencv
+          choco install eigen
+
+      # Configure
+      - name: Configure with CMake
+        run: cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+      # Build
       - name: Build
-        shell: bash
-        run: |
-          if [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
-            cmake --build "$BUILD_DIR" --config ${{ matrix.build_type }} -- -j$(nproc)
-          else
-            cmake --build "$BUILD_DIR" --config ${{ matrix.build_type }} -- /m
-          fi
+        run: cmake --build build --config ${{ matrix.build_type }} --parallel
 
-      - name: Run tests
-        working-directory: ${{ env.BUILD_DIR }}
-        shell: bash
-        run: ctest --build-config ${{ matrix.build_type }} --output-on-failure
+      # Install
+      - name: Install
+        run: cmake --install build --prefix instdir
