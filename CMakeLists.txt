@@ -45,7 +45,6 @@ include(CPack)
 
 # -------- Dependencies --------
 
-
 # Born to use PkgConfig, forced to use find_package.
 find_package(Eigen3 REQUIRED)
 
