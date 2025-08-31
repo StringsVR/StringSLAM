@@ -17,6 +17,13 @@ namespace StringSLAM
         CameraModel() = default;
         CameraModel(const cv::Mat &K_, cv::Mat &D_, cv::Mat &R_, cv::Size &capSize_)
             : K(K_.clone()), D(D_), R(R_), capSize(capSize_) {};
+
+        void copyFrom(const CameraModel &other) {
+            K = other.K.clone();
+            D = other.D.clone();
+            R = other.R.clone();
+            capSize = other.capSize;
+        }
     };
 
     // Frame Data
@@ -27,6 +34,7 @@ namespace StringSLAM
         std::vector<cv::KeyPoint> kp;   // Keypoints of frame
         cv::Mat desc;                   // Descriptor of keypoints
         cv::Mat pose;                   // 4x4 pose: [R | t; 0 0 0 1]
+        std::chrono::system_clock::time_point timestamp; // Timestamp
 
         Frame() = default;
 

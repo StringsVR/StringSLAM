@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/strings/StringSLAM/examples/build",
+  "command": "/usr/bin/clang++ -I/home/strings/StringSLAM/examples/../include -I/usr/include/opencv4 -I/usr/include/eigen3 -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/DescriptorMatching.dir/DescriptorMatching.cpp.o -c /home/strings/StringSLAM/examples/DescriptorMatching.cpp",
+  "file": "/home/strings/StringSLAM/examples/DescriptorMatching.cpp",
+  "output": "/home/strings/StringSLAM/examples/build/CMakeFiles/DescriptorMatching.dir/DescriptorMatching.cpp.o"
+},
+{
+  "directory": "/home/strings/StringSLAM/examples/build",
+  "command": "/usr/bin/clang++ -I/home/strings/StringSLAM/examples/../include -I/usr/include/opencv4 -I/usr/include/eigen3 -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/4.1.1/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/strings/StringSLAM/examples/build/CMakeFiles/4.1.1/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/strings/StringSLAM/examples/build/CMakeFiles/4.1.1/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "output": "/home/strings/StringSLAM/examples/build/CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/4.1.1/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
+}
+]

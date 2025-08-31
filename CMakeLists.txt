@@ -1,7 +1,7 @@
 set(PROJECT_NAME StringSLAM)
 cmake_minimum_required(VERSION 3.16)
 
-project(${PROJECT_NAME} LANGUAGES CXX)
+project(${PROJECT_NAME})
 
 if (NOT EXISTS ${CMAKE_BINARY_DIR}/CMakeCache.txt)
     if (NOT CMAKE_BUILD_TYPE)
@@ -26,7 +26,6 @@ IF (NOT ENABLE_COMPILE_FLAGS_FOR_TARGET)
     execute_process(COMMAND dpkg-architecture -qDEB_HOST_ARCH
         OUTPUT_VARIABLE ENABLE_COMPILE_FLAGS_FOR_TARGET OUTPUT_STRIP_TRAILING_WHITESPACE)
 endif()
-
 message(STATUS "Platform: ${ENABLE_COMPILE_FLAGS_FOR_TARGET}")
 if ("${ENABLE_COMPILE_FLAGS_FOR_TARGET}" STREQUAL "arm64")
     add_definitions(-ftree-vectorize)
