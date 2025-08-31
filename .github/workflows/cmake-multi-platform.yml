@@ -40,7 +40,7 @@ jobs:
         uses: lukka/run-vcpkg@v11
         with:
           # Pin a commit for reproducibility
-          vcpkgGitCommitId: '2025.01.15'
+          vcpkgGitCommitId: 'latest'
           # Cache key depends on your manifest
           vcpkgJsonGlob: 'vcpkg.json'
 
