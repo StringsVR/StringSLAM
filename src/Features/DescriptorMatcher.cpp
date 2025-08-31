@@ -1,5 +1,5 @@
 #include <StringSLAM/Features/DescriptorMatcher.hpp>
-#include <opencv2/video/tracking.hpp>
+#include <opencv2/video.hpp>
 
 namespace StringSLAM::Features {
     const std::vector<cv::DMatch> DescriptorMatcher::matchFrames(Frame &f1, Frame &f2) {

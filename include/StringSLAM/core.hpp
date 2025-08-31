@@ -1,6 +1,6 @@
 #pragma once
 #include <opencv2/features2d.hpp>
-#include <opencv2/core/mat.hpp>
+#include <opencv2/core.hpp>
 #include <opencv2/core/ocl.hpp>
 
 namespace StringSLAM
