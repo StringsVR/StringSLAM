@@ -1,4 +1,0 @@
-/home/strings/StringSLAM/examples/build/CMakeFiles/DescriptorMatching.dir
-/home/strings/StringSLAM/examples/build/CMakeFiles/CMakeCXXCompilerId.dir
-/home/strings/StringSLAM/examples/build/CMakeFiles/edit_cache.dir
-/home/strings/StringSLAM/examples/build/CMakeFiles/rebuild_cache.dir
