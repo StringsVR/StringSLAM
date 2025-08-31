@@ -44,28 +44,14 @@ set(CPACK_SOURCE_IGNORE_FILES "/\.git*;/build;")
 include(CPack)
 
 # -------- Dependencies --------
-find_package(PkgConfig REQUIRED)
-
-# Use PkgConfig for OpenCV
-pkg_check_modules(OPENCV REQUIRED opencv4)
-
-foreach(lib ${OPENCV_LIBRARIES})
-    # Remove leading "-l" if pkg-config inserted it
-    string(REGEX REPLACE "^-l" "" lib_clean ${lib})
-
-    find_library(_FOUND_LIB NAMES ${lib_clean} PATHS ${OPENCV_LIBRARY_DIRS})
-    if(_FOUND_LIB)
-        list(APPEND CLEANED_OPENCV_LIBRARIES ${_FOUND_LIB})
-    else()
-        message(WARNING "Dropping unavailable OpenCV lib: ${lib}")
-    endif()
-endforeach()
-
-set(OPENCV_LIBRARIES ${CLEANED_OPENCV_LIBRARIES})
 
 
-# Use PkgConfig for Eigen
-pkg_check_modules(EIGEN3 REQUIRED eigen3)
+# Born to use PkgConfig, forced to use find_package.
+find_package(Eigen3 REQUIRED)
+
+find_package(OpenCV REQUIRED
+    COMPONENTS core imgproc highgui features2d video
+)
 
 # (Optional) OpenEXR via find_package
 find_package(OpenEXR QUIET)
@@ -94,7 +80,7 @@ set_target_properties(lib${PROJECT_NAME} PROPERTIES PREFIX "" IMPORT_PREFIX "")
 
 target_link_libraries(lib${PROJECT_NAME}
     pthread
-    ${CLEANED_OPENCV_LIBRARIES}
+    ${OPENCV_LIBRARIES}
     ${EIGEN3_LIBRARIES}
 )
 
