@@ -53,6 +53,7 @@ pkg_check_modules(OPENCV REQUIRED opencv4)
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_gapi.*")
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_stitching.*")
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_alphamat.*")
+list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_aruco.*") 
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_world.*") 
 
 # Use PkgConfig for Eigen
