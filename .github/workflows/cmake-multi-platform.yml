@@ -45,17 +45,20 @@ jobs:
         shell: pwsh
         run: |
           choco install pkgconfiglite
-          choco install opencv
-          choco install eigen
-          # OpenEXR support on Windows via vcpkg
+          # Use vcpkg for consistency
           git clone https://github.com/microsoft/vcpkg.git
           .\vcpkg\bootstrap-vcpkg.bat
-          .\vcpkg\vcpkg install openexr
-          echo "VCPKG_ROOT=$PWD/vcpkg" >> $env:GITHUB_ENV
+          .\vcpkg\vcpkg install opencv eigen3 openexr
+          echo "CMAKE_TOOLCHAIN_FILE=$PWD/vcpkg/scripts/buildsystems/vcpkg.cmake" >> $env:GITHUB_ENV
 
       # Configure
       - name: Configure with CMake
-        run: cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+        run: |
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCMAKE_TOOLCHAIN_FILE=${{ env.CMAKE_TOOLCHAIN_FILE }}
+          else
+            cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+          fi
 
       # Build
       - name: Build
