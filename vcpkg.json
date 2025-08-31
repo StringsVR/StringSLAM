@@ -1,0 +1,10 @@
+{
+  "name": "stringslam",
+  "version": "0.1.0",
+  "dependencies": [
+    "opencv",
+    "eigen3",
+    "openexr",
+    "pkgconf"
+  ]
+}
