@@ -49,6 +49,10 @@ find_package(PkgConfig REQUIRED)
 # Use PkgConfig for OpenCV
 pkg_check_modules(OPENCV REQUIRED opencv4)
 
+# Remove gapi (and any other unwanted libs)
+list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_gapi.*")
+list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_world.*") # optional: for Windows vcpkg world build
+
 # Use PkgConfig for Eigen
 pkg_check_modules(EIGEN3 REQUIRED eigen3)
 
