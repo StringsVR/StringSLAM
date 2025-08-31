@@ -44,12 +44,15 @@ jobs:
           # Cache key depends on your manifest
           vcpkgJsonGlob: 'vcpkg.json'
 
-      # Configure with CMake
-      - name: Configure with CMake
-        run: |
-          cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ${{
-            runner.os == 'Windows' && '-DCMAKE_TOOLCHAIN_FILE=' + env.VCPKG_TOOLCHAIN_FILE || ''
-          }}
+      # Configure (Linux)
+      - name: Configure with CMake (Linux)
+        if: runner.os == 'Linux'
+        run: cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+      # Configure (Windows)
+      - name: Configure with CMake (Windows)
+        if: runner.os == 'Windows'
+        run: cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCMAKE_TOOLCHAIN_FILE=${{ env.VCPKG_TOOLCHAIN_FILE }}
 
       # Build
       - name: Build
