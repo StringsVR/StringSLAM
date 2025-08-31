@@ -20,7 +20,6 @@
 *.idb
 
 # ---- Build directories ----
-/examples/build/
 /build/
 /bin/
 /lib/
@@ -30,6 +29,12 @@
 /cmake_install.cmake
 /Makefile
 /*.make
+
+# Project-specific builds
+/examples/build/
+/examples/.cache/
+/examples/bin/
+/examples/lib/
 
 # ---- Logs ----
 *.log
