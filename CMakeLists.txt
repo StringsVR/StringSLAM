@@ -49,12 +49,14 @@ find_package(PkgConfig REQUIRED)
 # Use PkgConfig for OpenCV
 pkg_check_modules(OPENCV REQUIRED opencv4)
 
-# Remove unwanted libs
-list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_gapi.*")
-list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_stitching.*")
-list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_alphamat.*")
-list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_aruco.*") 
-list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_world.*") 
+foreach(lib ${OPENCV_LIBRARIES})
+    find_library(${lib}_FOUND NAMES ${lib})
+    if(NOT ${lib}_FOUND)
+        message(WARNING "Dropping unavailable OpenCV lib: ${lib}")
+        list(REMOVE_ITEM OPENCV_LIBRARIES ${lib})
+    endif()
+endforeach()
+
 
 # Use PkgConfig for Eigen
 pkg_check_modules(EIGEN3 REQUIRED eigen3)
