@@ -49,9 +49,10 @@ find_package(PkgConfig REQUIRED)
 # Use PkgConfig for OpenCV
 pkg_check_modules(OPENCV REQUIRED opencv4)
 
-# Remove gapi (and any other unwanted libs)
+# Remove unwanted libs
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_gapi.*")
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_stitching.*")
+list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_alphamat.*")
 list(FILTER OPENCV_LIBRARIES EXCLUDE REGEX ".*opencv_world.*") 
 
 # Use PkgConfig for Eigen
