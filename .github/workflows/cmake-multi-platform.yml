@@ -45,7 +45,7 @@ jobs:
         run: |
           if [[ "$RUNNER_OS" == "Linux" ]]; then
             cmake -B build -S $GITHUB_WORKSPACE \
-              1-DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
+              -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
               -DOpenCV_DIR=/usr/lib/x86_64-linux-gnu/cmake/opencv4
           else
             cmake -B build -S $GITHUB_WORKSPACE \
