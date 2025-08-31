@@ -44,10 +44,13 @@ set(CPACK_SOURCE_IGNORE_FILES "/\.git*;/build;")
 include(CPack)
 
 # -------- Dependencies --------
+find_package(PkgConfig REQUIRED)
 
-# Born to use PkgConfig, forced to use find_package.
-find_package(Eigen3 REQUIRED)
-find_package(OpenCV REQUIRED)
+# Use PkgConfig for OpenCV
+pkg_check_modules(OPENCV REQUIRED opencv4)
+
+# Use PkgConfig for Eigen
+pkg_check_modules(EIGEN3 REQUIRED eigen3)
 
 # (Optional) OpenEXR via find_package
 find_package(OpenEXR QUIET)
