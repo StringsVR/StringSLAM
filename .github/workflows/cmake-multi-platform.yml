@@ -43,6 +43,8 @@ jobs:
           vcpkgGitCommitId: 'b1b19307e2d2ec1eefbdb7ea069de7d4bcd31f01'
           # Cache key depends on your manifest
           vcpkgJsonGlob: 'vcpkg.json'
+        run: |
+          setx VCPKG_FEATURE_FLAGS "manifests,registries,versions,compilertracking,binarycaching,overlay-ports,overlay-triplets,packages"
 
       # Configure (Linux)
       - name: Configure with CMake (Linux)
