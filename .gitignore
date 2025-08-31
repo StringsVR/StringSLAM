@@ -20,7 +20,7 @@
 *.idb
 
 # ---- Build directories ----
-/build/
+build/
 /bin/
 /lib/
 /dist/
