@@ -50,12 +50,18 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(OPENCV REQUIRED opencv4)
 
 foreach(lib ${OPENCV_LIBRARIES})
-    find_library(${lib}_FOUND NAMES ${lib})
-    if(NOT ${lib}_FOUND)
+    # Remove leading "-l" if pkg-config inserted it
+    string(REGEX REPLACE "^-l" "" lib_clean ${lib})
+
+    find_library(_FOUND_LIB NAMES ${lib_clean} PATHS ${OPENCV_LIBRARY_DIRS})
+    if(_FOUND_LIB)
+        list(APPEND CLEANED_OPENCV_LIBRARIES ${_FOUND_LIB})
+    else()
         message(WARNING "Dropping unavailable OpenCV lib: ${lib}")
-        list(REMOVE_ITEM OPENCV_LIBRARIES ${lib})
     endif()
 endforeach()
+
+set(OPENCV_LIBRARIES ${CLEANED_OPENCV_LIBRARIES})
 
 
 # Use PkgConfig for Eigen
@@ -88,7 +94,7 @@ set_target_properties(lib${PROJECT_NAME} PROPERTIES PREFIX "" IMPORT_PREFIX "")
 
 target_link_libraries(lib${PROJECT_NAME}
     pthread
-    ${OPENCV_LIBRARIES}
+    ${CLEANED_OPENCV_LIBRARIES}
     ${EIGEN3_LIBRARIES}
 )
 
