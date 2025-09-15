@@ -1,0 +1,46 @@
+\doxysection{Feature\+Finder.\+hpp}
+\hypertarget{FeatureFinder_8hpp_source}{}\label{FeatureFinder_8hpp_source}\index{include/StringSLAM/Feature/FeatureFinder.hpp@{include/StringSLAM/Feature/FeatureFinder.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}StringSLAM/core.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }StringSLAM::Feature}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{FeatureFinder}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ORB\ object\ specified\ in\ contructor}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::shared\_ptr<OrbWrapper>\ orb;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Below\ are\ private\ variables\ not\ specified\ but\ used\ in\ class.\ -\/-\/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/\ Description\ Matcher\ -\/-\/-\/-\/}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fast\ matching\ class\ provided\ by\ OpenCV}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ cv::Ptr<cv::BFMatcher>\ matcher;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ List\ of\ "{}KnnMatch"{},\ if\ your\ not\ familiar\ refer\ to\ google.}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<std::vector<cv::DMatch>>\ knnMatches;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ List\ of\ matches\ filtered\ from\ Knn.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::vector<cv::DMatch>\ matches;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{FeatureFinder}}(std::shared\_ptr<OrbWrapper>\ orb\_);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{\string~FeatureFinder}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e}{getKeypoint}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda8c3b76a1a41ce7ba995}{drawKeypoint}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f,\ cv::Mat\ \&out,\ cv::Scalar\ color);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<cv::DMatch>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a98c7f84b1baf4427f0bc3064f5d93a14}{matchFrames}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f1,\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f2);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<cv::DMatch>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ab065fdfa75368ba4eb3b6818e0984294}{matchFramesLK}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f1,\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f2,\ cv::Size\ winSize\ =\ cv::Size(21,\ 21),\ \textcolor{keywordtype}{int}\ maxLevel\ =\ 3);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<FeatureFinder>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_af838b45963913fb7a38a049a224a9622}{create}}(std::shared\_ptr<OrbWrapper>\ orb\_)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<FeatureFinder>(orb\_);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \};}
+\DoxyCodeLine{00076\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM::Feature}}
+
+\end{DoxyCode}

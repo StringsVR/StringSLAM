@@ -1,0 +1,90 @@
+\doxysection{String\+SLAM\+::Camera\+Intrinsic Struct Reference}
+\hypertarget{structStringSLAM_1_1CameraIntrinsic}{}\label{structStringSLAM_1_1CameraIntrinsic}\index{StringSLAM::CameraIntrinsic@{StringSLAM::CameraIntrinsic}}
+
+
+Stores the intrinsic parameters of a camera.  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic_af365d8e2223ee41785457a1cae0fd161}{Camera\+Intrinsic}} (const double fx\+\_\+, const double fy\+\_\+, const double cx\+\_\+, const double cy\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{structStringSLAM_1_1CameraIntrinsic}{Camera\+Intrinsic} with given parameters. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_a4f67bc7c943286eef0b976a34641ff14}\label{structStringSLAM_1_1CameraIntrinsic_a4f67bc7c943286eef0b976a34641ff14} 
+{\bfseries Camera\+Intrinsic} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes values to default (uninitialized). \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic_a0659b0beb22d630b420522b61e69d5a0}{getK}} () const
+\begin{DoxyCompactList}\small\item\em Returns the camera intrinsic matrix K (3x3). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_ad26d93d2daed9b4e6091c6e4c77cf228}\label{structStringSLAM_1_1CameraIntrinsic_ad26d93d2daed9b4e6091c6e4c77cf228} 
+double {\bfseries fx}
+\begin{DoxyCompactList}\small\item\em Focal length in x direction (pixels) \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_acd4376c9b9445f8b0e2d07f2a09bc1cf}\label{structStringSLAM_1_1CameraIntrinsic_acd4376c9b9445f8b0e2d07f2a09bc1cf} 
+double {\bfseries fy}
+\begin{DoxyCompactList}\small\item\em Focal length in y direction (pixels) \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_a30aa7bd304d591965e986203b627f0ce}\label{structStringSLAM_1_1CameraIntrinsic_a30aa7bd304d591965e986203b627f0ce} 
+double {\bfseries cx}
+\begin{DoxyCompactList}\small\item\em Principal point x-\/coordinate (pixels) \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_af73c1537f1d8cf19267720b2cae87da1}\label{structStringSLAM_1_1CameraIntrinsic_af73c1537f1d8cf19267720b2cae87da1} 
+double {\bfseries cy}
+\begin{DoxyCompactList}\small\item\em Principal point y-\/coordinate (pixels) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores the intrinsic parameters of a camera. 
+
+The intrinsic parameters define the internal characteristics of the camera, Such as focal lengths and principal point. 
+
+\label{doc-constructors}
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_af365d8e2223ee41785457a1cae0fd161}\index{StringSLAM::CameraIntrinsic@{StringSLAM::CameraIntrinsic}!CameraIntrinsic@{CameraIntrinsic}}
+\index{CameraIntrinsic@{CameraIntrinsic}!StringSLAM::CameraIntrinsic@{StringSLAM::CameraIntrinsic}}
+\doxysubsubsection{\texorpdfstring{CameraIntrinsic()}{CameraIntrinsic()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1CameraIntrinsic_af365d8e2223ee41785457a1cae0fd161} 
+String\+SLAM\+::\+Camera\+Intrinsic\+::\+Camera\+Intrinsic (\begin{DoxyParamCaption}\item[{const double}]{fx\+\_\+}{, }\item[{const double}]{fy\+\_\+}{, }\item[{const double}]{cx\+\_\+}{, }\item[{const double}]{cy\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{structStringSLAM_1_1CameraIntrinsic}{Camera\+Intrinsic} with given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fx\+\_\+} & Focal length in x direction \\
+\hline
+{\em fy\+\_\+} & Focal length in y direction \\
+\hline
+{\em cx\+\_\+} & Principal point x-\/coordinate \\
+\hline
+{\em cy\+\_\+} & Principal point y-\/coordinate \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structStringSLAM_1_1CameraIntrinsic_a0659b0beb22d630b420522b61e69d5a0}\index{StringSLAM::CameraIntrinsic@{StringSLAM::CameraIntrinsic}!getK@{getK}}
+\index{getK@{getK}!StringSLAM::CameraIntrinsic@{StringSLAM::CameraIntrinsic}}
+\doxysubsubsection{\texorpdfstring{getK()}{getK()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1CameraIntrinsic_a0659b0beb22d630b420522b61e69d5a0} 
+cv\+::\+Mat String\+SLAM\+::\+Camera\+Intrinsic\+::getK (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the camera intrinsic matrix K (3x3). 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat The 3x3 intrinsic matrix 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/core.\+hpp\end{DoxyCompactItemize}

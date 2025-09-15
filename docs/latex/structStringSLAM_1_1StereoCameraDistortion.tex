@@ -1,0 +1,51 @@
+\doxysection{String\+SLAM\+::Stereo\+Camera\+Distortion Struct Reference}
+\hypertarget{structStringSLAM_1_1StereoCameraDistortion}{}\label{structStringSLAM_1_1StereoCameraDistortion}\index{StringSLAM::StereoCameraDistortion@{StringSLAM::StereoCameraDistortion}}
+
+
+Stores the Stereo Cameras distortion parameters.  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_a5fec958abdbe1a67168d8212f8c9caf2}\label{structStringSLAM_1_1StereoCameraDistortion_a5fec958abdbe1a67168d8212f8c9caf2} 
+{\bfseries Stereo\+Camera\+Distortion} (cv\+::\+Mat R\+\_\+, cv\+::\+Mat T\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_a77c26a6160859d2c60125b0f63dbfe10}\label{structStringSLAM_1_1StereoCameraDistortion_a77c26a6160859d2c60125b0f63dbfe10} 
+cv\+::\+Mat {\bfseries R}
+\begin{DoxyCompactList}\small\item\em Rotation from left -\/\texorpdfstring{$>$}{>} right camera. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_ad9bb414cd32f73fac81bb77bf41397e6}\label{structStringSLAM_1_1StereoCameraDistortion_ad9bb414cd32f73fac81bb77bf41397e6} 
+cv\+::\+Mat {\bfseries T}
+\begin{DoxyCompactList}\small\item\em Translation from left -\/\texorpdfstring{$>$}{>} right camera. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_ab87b046f674e5714b48bcd0b64565c86}\label{structStringSLAM_1_1StereoCameraDistortion_ab87b046f674e5714b48bcd0b64565c86} 
+cv\+::\+Mat {\bfseries R1}
+\begin{DoxyCompactList}\small\item\em Rectification rotation for left camera. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_af99f11a61d78057a9b47e3b7a92399cd}\label{structStringSLAM_1_1StereoCameraDistortion_af99f11a61d78057a9b47e3b7a92399cd} 
+cv\+::\+Mat {\bfseries R2}
+\begin{DoxyCompactList}\small\item\em Rectification rotation for right camera. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_ab74d0db611194e21e8c34baa05100f67}\label{structStringSLAM_1_1StereoCameraDistortion_ab74d0db611194e21e8c34baa05100f67} 
+cv\+::\+Mat {\bfseries P1}
+\begin{DoxyCompactList}\small\item\em Projection matrix for left camera. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_a49a88b0b6a0b15c9a5e7ac1bca553689}\label{structStringSLAM_1_1StereoCameraDistortion_a49a88b0b6a0b15c9a5e7ac1bca553689} 
+cv\+::\+Mat {\bfseries P2}
+\begin{DoxyCompactList}\small\item\em Projection matrix for right camera. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoCameraDistortion_a30507dc6a88925d82441c82e4c65d368}\label{structStringSLAM_1_1StereoCameraDistortion_a30507dc6a88925d82441c82e4c65d368} 
+cv\+::\+Mat {\bfseries Q}
+\begin{DoxyCompactList}\small\item\em Disparity-\/to-\/depth matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores the Stereo Cameras distortion parameters. 
+
+The distortion defines the Rectification between two Mono\+Trackers. Also the R \& T from both cameras. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/core.\+hpp\end{DoxyCompactItemize}

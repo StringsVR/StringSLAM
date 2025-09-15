@@ -1,0 +1,142 @@
+\doxysection{String\+SLAM\+::Feature\+::Feature\+Finder Class Reference}
+\hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder}{}\label{classStringSLAM_1_1Feature_1_1FeatureFinder}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+
+
+Class meant for handling point detection.  
+
+
+
+
+{\ttfamily \#include $<$Feature\+Finder.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{Feature\+Finder}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$ orb\+\_\+)
+\begin{DoxyCompactList}\small\item\em Create constructor for \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e}{get\+Keypoint}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
+\begin{DoxyCompactList}\small\item\em Get keypoints from frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda8c3b76a1a41ce7ba995}{draw\+Keypoint}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f, cv\+::\+Mat \&out, cv\+::\+Scalar color)
+\begin{DoxyCompactList}\small\item\em Draw keypoints to frame. \end{DoxyCompactList}\item 
+const std\+::vector$<$ cv\+::\+DMatch $>$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a98c7f84b1baf4427f0bc3064f5d93a14}{match\+Frames}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f1, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f2)
+\begin{DoxyCompactList}\small\item\em Match descriptions from 2 frames. \end{DoxyCompactList}\item 
+const std\+::vector$<$ cv\+::\+DMatch $>$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ab065fdfa75368ba4eb3b6818e0984294}{match\+Frames\+LK}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f1, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f2, cv\+::\+Size win\+Size=cv\+::\+Size(21, 21), int max\+Level=3)
+\begin{DoxyCompactList}\small\item\em Match descriptors from 2 frames using Lucas–\+Kanade (speedy) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder}} $>$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_af838b45963913fb7a38a049a224a9622}{create}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$ orb\+\_\+)
+\begin{DoxyCompactList}\small\item\em Create Shared Pointer of \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class meant for handling point detection. 
+
+A Class Utility meant to be used to find keypoints and descriptors in a frame. Also, to match descriptors between 2 frames 
+
+\label{doc-constructors}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!FeatureFinder@{FeatureFinder}}
+\index{FeatureFinder@{FeatureFinder}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{FeatureFinder()}{FeatureFinder()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09} 
+String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::\+Feature\+Finder (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$}]{orb\+\_\+}{}\end{DoxyParamCaption})}
+
+
+
+Create constructor for \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orb\+\_\+} & \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_af838b45963913fb7a38a049a224a9622}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!create@{create}}
+\index{create@{create}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_af838b45963913fb7a38a049a224a9622} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder}} $>$ String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::create (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$}]{orb\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create Shared Pointer of \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder} object. 
+
+\begin{DoxyReturn}{Returns}
+Shared Pointer of \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder} 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda8c3b76a1a41ce7ba995}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!drawKeypoint@{drawKeypoint}}
+\index{drawKeypoint@{drawKeypoint}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{drawKeypoint()}{drawKeypoint()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda8c3b76a1a41ce7ba995} 
+void String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::draw\+Keypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{, }\item[{cv\+::\+Mat \&}]{out}{, }\item[{cv\+::\+Scalar}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Draw keypoints to frame. 
+
+\begin{DoxyReturn}{Returns}
+Mat with keypoint 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!getKeypoint@{getKeypoint}}
+\index{getKeypoint@{getKeypoint}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{getKeypoint()}{getKeypoint()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e} 
+void String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::get\+Keypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Get keypoints from frame. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structStringSLAM_1_1Frame}{Frame} with specified keypoints. 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_a98c7f84b1baf4427f0bc3064f5d93a14}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!matchFrames@{matchFrames}}
+\index{matchFrames@{matchFrames}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{matchFrames()}{matchFrames()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_a98c7f84b1baf4427f0bc3064f5d93a14} 
+const std\+::vector$<$ cv\+::\+DMatch $>$ String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::match\+Frames (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f1}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f2}{}\end{DoxyParamCaption})}
+
+
+
+Match descriptions from 2 frames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f1} & \doxylink{structStringSLAM_1_1Frame}{Frame} 1 \\
+\hline
+{\em f2} & \doxylink{structStringSLAM_1_1Frame}{Frame} 2 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_ab065fdfa75368ba4eb3b6818e0984294}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!matchFramesLK@{matchFramesLK}}
+\index{matchFramesLK@{matchFramesLK}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{matchFramesLK()}{matchFramesLK()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_ab065fdfa75368ba4eb3b6818e0984294} 
+const std\+::vector$<$ cv\+::\+DMatch $>$ String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::match\+Frames\+LK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f1}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f2}{, }\item[{cv\+::\+Size}]{win\+Size}{ = {\ttfamily cv\+:\+:Size(21,~21)}, }\item[{int}]{max\+Level}{ = {\ttfamily 3}}\end{DoxyParamCaption})}
+
+
+
+Match descriptors from 2 frames using Lucas–\+Kanade (speedy) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f1} & \doxylink{structStringSLAM_1_1Frame}{Frame} 1 \\
+\hline
+{\em f2} & \doxylink{structStringSLAM_1_1Frame}{Frame} 2 \\
+\hline
+{\em win\+Size} & ROI for matches. \\
+\hline
+{\em max\+Level} & Amount of pyramid levels applied to frames \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/\+Feature/Feature\+Finder.\+hpp\item 
+src/\+Feature/Feature\+Finder.\+cpp\end{DoxyCompactItemize}

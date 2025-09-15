@@ -1,0 +1,84 @@
+\doxysection{String\+SLAM\+::Feature\+::Mono\+Tracker Class Reference}
+\hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker}{}\label{classStringSLAM_1_1Feature_1_1MonoTracker}\index{StringSLAM::Feature::MonoTracker@{StringSLAM::Feature::MonoTracker}}
+
+
+A tracking object that works as a camera and returns a \doxylink{structStringSLAM_1_1Frame}{Frame}.  
+
+
+
+
+{\ttfamily \#include $<$Mono\+Tracker.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Feature_1_1MonoTracker_a1e861264ea91443d2c2a9725886f7321}{Mono\+Tracker}} (int id\+\_\+, \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{Camera\+Model}} cm\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classStringSLAM_1_1Feature_1_1MonoTracker}{Mono\+Tracker}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1MonoTracker_add3a5b920d33639285e9a4178a43f818}{open}} ()
+\begin{DoxyCompactList}\small\item\em Open camera tracker. \end{DoxyCompactList}\item 
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_a52572f01578e49998e04c444f4ee0ca5}\label{classStringSLAM_1_1Feature_1_1MonoTracker_a52572f01578e49998e04c444f4ee0ca5} 
+void {\bfseries release} ()
+\item 
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_a6471b509619f660d1d3cee18fa3a31c7}\label{classStringSLAM_1_1Feature_1_1MonoTracker_a6471b509619f660d1d3cee18fa3a31c7} 
+void {\bfseries read} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
+\item 
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_aed5a203b0a7b4099d39588efc434749b}\label{classStringSLAM_1_1Feature_1_1MonoTracker_aed5a203b0a7b4099d39588efc434749b} 
+void {\bfseries read\+Undistorted} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
+\item 
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_ac3f3241c7f8c7861466e72a4284d2b8c}\label{classStringSLAM_1_1Feature_1_1MonoTracker_ac3f3241c7f8c7861466e72a4284d2b8c} 
+double {\bfseries get\+FPS} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_a02ec5b026a6127dc1f0e989b6905c876}\label{classStringSLAM_1_1Feature_1_1MonoTracker_a02ec5b026a6127dc1f0e989b6905c876} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1MonoTracker}{Mono\+Tracker}} $>$ {\bfseries create} (int id\+\_\+, \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{Camera\+Model}} cm\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A tracking object that works as a camera and returns a \doxylink{structStringSLAM_1_1Frame}{Frame}. 
+
+\label{doc-constructors}
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_a1e861264ea91443d2c2a9725886f7321}\index{StringSLAM::Feature::MonoTracker@{StringSLAM::Feature::MonoTracker}!MonoTracker@{MonoTracker}}
+\index{MonoTracker@{MonoTracker}!StringSLAM::Feature::MonoTracker@{StringSLAM::Feature::MonoTracker}}
+\doxysubsubsection{\texorpdfstring{MonoTracker()}{MonoTracker()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1MonoTracker_a1e861264ea91443d2c2a9725886f7321} 
+String\+SLAM\+::\+Feature\+::\+Mono\+Tracker\+::\+Mono\+Tracker (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1CameraModel}{Camera\+Model}}}]{cm\+\_\+}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classStringSLAM_1_1Feature_1_1MonoTracker}{Mono\+Tracker}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+} & ID of camera index \\
+\hline
+{\em cm\+\_\+} & \doxylink{structStringSLAM_1_1CameraModel}{Camera\+Model} for tracker. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStringSLAM_1_1Feature_1_1MonoTracker_add3a5b920d33639285e9a4178a43f818}\index{StringSLAM::Feature::MonoTracker@{StringSLAM::Feature::MonoTracker}!open@{open}}
+\index{open@{open}!StringSLAM::Feature::MonoTracker@{StringSLAM::Feature::MonoTracker}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1MonoTracker_add3a5b920d33639285e9a4178a43f818} 
+bool String\+SLAM\+::\+Feature\+::\+Mono\+Tracker\+::open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Open camera tracker. 
+
+\begin{DoxyReturn}{Returns}
+Camera opened succesfully 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/\+Tracker/Mono\+Tracker.\+hpp\end{DoxyCompactItemize}

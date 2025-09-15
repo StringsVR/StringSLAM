@@ -1,0 +1,115 @@
+\doxysection{String\+SLAM\+::Stereo\+Frame Struct Reference}
+\hypertarget{structStringSLAM_1_1StereoFrame}{}\label{structStringSLAM_1_1StereoFrame}\index{StringSLAM::StereoFrame@{StringSLAM::StereoFrame}}
+
+
+A \doxylink{structStringSLAM_1_1Frame}{Frame} type used to interface with Stereo\+Tracker.  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_a2433de2e4ec6aa4b30fb2facd0858917}\label{structStringSLAM_1_1StereoFrame_a2433de2e4ec6aa4b30fb2facd0858917} 
+void {\bfseries set\+Timestamp} ()
+\begin{DoxyCompactList}\small\item\em Set timestamp of \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structStringSLAM_1_1StereoFrame_a6f2e977c3983f15f49a43b57a293c1f3}{copy\+From}} (const \mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}} \&f)
+\begin{DoxyCompactList}\small\item\em Copy \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame} data into this \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structStringSLAM_1_1StereoFrame_a5104aeca9566ef0fcf7a284adef83a7b}{set\+Pose\+From\+TR}} (const cv\+::\+Mat \&t, const cv\+::\+Mat \&R)
+\begin{DoxyCompactList}\small\item\em Set \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame} pose from t (translation) and R (rotation). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structStringSLAM_1_1StereoFrame_a12a94b43f2bdde34b850c5990dce0bdf}{get\+TRFrom\+Pose}} (cv\+::\+Mat \&t, cv\+::\+Mat \&R)
+\begin{DoxyCompactList}\small\item\em Get r \& T from current pose of \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_aff342eaec1554b808f34dcf727ef4a7a}\label{structStringSLAM_1_1StereoFrame_aff342eaec1554b808f34dcf727ef4a7a} 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em ID of the frame. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_a533167edc9822594fade7f154da22675}\label{structStringSLAM_1_1StereoFrame_a533167edc9822594fade7f154da22675} 
+\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} {\bfseries frame\+Left}
+\begin{DoxyCompactList}\small\item\em Image set by left capture device. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_adc9a25aeda7f3b9c526369bf1174b21c}\label{structStringSLAM_1_1StereoFrame_adc9a25aeda7f3b9c526369bf1174b21c} 
+\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} {\bfseries frame\+Right}
+\begin{DoxyCompactList}\small\item\em Image set by right capture device. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_aab062144ee57c60408e0db4c98a60fd5}\label{structStringSLAM_1_1StereoFrame_aab062144ee57c60408e0db4c98a60fd5} 
+cv\+::\+Mat {\bfseries depth\+Frame}
+\begin{DoxyCompactList}\small\item\em Depth map of frame. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_a51d64ca84c51db39dadf1f8fdc8f8b84}\label{structStringSLAM_1_1StereoFrame_a51d64ca84c51db39dadf1f8fdc8f8b84} 
+std\+::vector$<$ cv\+::\+Key\+Point $>$ {\bfseries kp}
+\begin{DoxyCompactList}\small\item\em Extracted Keypoints from frame. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_afe9931bbe4636775f4df3699f3b80db2}\label{structStringSLAM_1_1StereoFrame_afe9931bbe4636775f4df3699f3b80db2} 
+cv\+::\+Mat {\bfseries desc}
+\begin{DoxyCompactList}\small\item\em Matches description of this frame compared to another. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_a96cdce248aeb8b9f3e941ad1a14571e5}\label{structStringSLAM_1_1StereoFrame_a96cdce248aeb8b9f3e941ad1a14571e5} 
+cv\+::\+Mat {\bfseries pose}
+\begin{DoxyCompactList}\small\item\em Real time location of when frame was captured. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1StereoFrame_ad45bd9475af77f97496418a269090906}\label{structStringSLAM_1_1StereoFrame_ad45bd9475af77f97496418a269090906} 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point {\bfseries timestamp}
+\begin{DoxyCompactList}\small\item\em Timestamp of when frame was captured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{structStringSLAM_1_1Frame}{Frame} type used to interface with Stereo\+Tracker. 
+
+\label{doc-func-members}
+\Hypertarget{structStringSLAM_1_1StereoFrame_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structStringSLAM_1_1StereoFrame_a6f2e977c3983f15f49a43b57a293c1f3}\index{StringSLAM::StereoFrame@{StringSLAM::StereoFrame}!copyFrom@{copyFrom}}
+\index{copyFrom@{copyFrom}!StringSLAM::StereoFrame@{StringSLAM::StereoFrame}}
+\doxysubsubsection{\texorpdfstring{copyFrom()}{copyFrom()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1StereoFrame_a6f2e977c3983f15f49a43b57a293c1f3} 
+void String\+SLAM\+::\+Stereo\+Frame\+::copy\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}} \&}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame} data into this \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Original \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structStringSLAM_1_1StereoFrame_a12a94b43f2bdde34b850c5990dce0bdf}\index{StringSLAM::StereoFrame@{StringSLAM::StereoFrame}!getTRFromPose@{getTRFromPose}}
+\index{getTRFromPose@{getTRFromPose}!StringSLAM::StereoFrame@{StringSLAM::StereoFrame}}
+\doxysubsubsection{\texorpdfstring{getTRFromPose()}{getTRFromPose()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1StereoFrame_a12a94b43f2bdde34b850c5990dce0bdf} 
+void String\+SLAM\+::\+Stereo\+Frame\+::get\+TRFrom\+Pose (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{t}{, }\item[{cv\+::\+Mat \&}]{R}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get r \& T from current pose of \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Translation Matrix \\
+\hline
+{\em R} & Rotation Matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}\textquotesingle{}s translation and rotation matrix. 
+\end{DoxyReturn}
+\Hypertarget{structStringSLAM_1_1StereoFrame_a5104aeca9566ef0fcf7a284adef83a7b}\index{StringSLAM::StereoFrame@{StringSLAM::StereoFrame}!setPoseFromTR@{setPoseFromTR}}
+\index{setPoseFromTR@{setPoseFromTR}!StringSLAM::StereoFrame@{StringSLAM::StereoFrame}}
+\doxysubsubsection{\texorpdfstring{setPoseFromTR()}{setPoseFromTR()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1StereoFrame_a5104aeca9566ef0fcf7a284adef83a7b} 
+void String\+SLAM\+::\+Stereo\+Frame\+::set\+Pose\+From\+TR (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{t}{, }\item[{const cv\+::\+Mat \&}]{R}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame} pose from t (translation) and R (rotation). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Translation Matrix \\
+\hline
+{\em R} & Rotation Matrix \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/core.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\doxysection{String\+SLAM\+::Orb\+Wrapper Class Reference}
+\hypertarget{classStringSLAM_1_1OrbWrapper}{}\label{classStringSLAM_1_1OrbWrapper}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+
+
+A wrapper class for Open\+CV\textquotesingle{}s ORB.  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_aa6476683071324676d0098dae4c0fdc9}{Orb\+Wrapper}} (int nfeatures, float scale\+Factor, int nlevels, int edge\+Threshold, int first\+Level, int WTA\+\_\+K, cv\+::\+ORB\+::\+Score\+Type score\+Type, int patch\+Size, int fast\+Threshold)
+\begin{DoxyCompactList}\small\item\em Construct a Open\+CV \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_a1757ea442ac356ad7209a50416b5d3a1}{get\+Max\+Features}} () const
+\begin{DoxyCompactList}\small\item\em Get the max features specified from initialization. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_a3018cd47a7ab78813ba745b5268e7717}{get\+Fast\+Threshold}} () const
+\begin{DoxyCompactList}\small\item\em Get fast threshold specified from initialization. \end{DoxyCompactList}\item 
+\Hypertarget{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe}\label{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe} 
+void {\bfseries detect\+And\+Compute} (cv\+::\+Mat \&img, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&kp, cv\+::\+Mat \&desc)
+\begin{DoxyCompactList}\small\item\em Refer to Open\+CV doc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_a0510a4d494ea493e480b3379020f39de}{create}} (int nfeatures\+\_\+=2000, float scale\+Factor\+\_\+=1.\+2f, int nlevels\+\_\+=4, int edge\+Threshold\+\_\+=30, int first\+Level\+\_\+=0, int WTA\+\_\+\+K\+\_\+=2, cv\+::\+ORB\+::\+Score\+Type score\+Type\+\_\+=cv\+::\+ORB\+::\+HARRIS\+\_\+\+SCORE, int patch\+Size\+\_\+=30, int fast\+Threshold\+\_\+=50)
+\begin{DoxyCompactList}\small\item\em Create Shared Pointer of \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper class for Open\+CV\textquotesingle{}s ORB. 
+
+\label{doc-constructors}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_aa6476683071324676d0098dae4c0fdc9}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!OrbWrapper@{OrbWrapper}}
+\index{OrbWrapper@{OrbWrapper}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+\doxysubsubsection{\texorpdfstring{OrbWrapper()}{OrbWrapper()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1OrbWrapper_aa6476683071324676d0098dae4c0fdc9} 
+String\+SLAM\+::\+Orb\+Wrapper\+::\+Orb\+Wrapper (\begin{DoxyParamCaption}\item[{int}]{nfeatures}{, }\item[{float}]{scale\+Factor}{, }\item[{int}]{nlevels}{, }\item[{int}]{edge\+Threshold}{, }\item[{int}]{first\+Level}{, }\item[{int}]{WTA\+\_\+K}{, }\item[{cv\+::\+ORB\+::\+Score\+Type}]{score\+Type}{, }\item[{int}]{patch\+Size}{, }\item[{int}]{fast\+Threshold}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a Open\+CV \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}. 
+
+Same parameters as ORB\+::create(), refer to Open\+CV docs. 
+
+\label{doc-func-members}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_a0510a4d494ea493e480b3379020f39de}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!create@{create}}
+\index{create@{create}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1OrbWrapper_a0510a4d494ea493e480b3379020f39de} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$ String\+SLAM\+::\+Orb\+Wrapper\+::create (\begin{DoxyParamCaption}\item[{int}]{nfeatures\+\_\+}{ = {\ttfamily 2000}, }\item[{float}]{scale\+Factor\+\_\+}{ = {\ttfamily 1.2f}, }\item[{int}]{nlevels\+\_\+}{ = {\ttfamily 4}, }\item[{int}]{edge\+Threshold\+\_\+}{ = {\ttfamily 30}, }\item[{int}]{first\+Level\+\_\+}{ = {\ttfamily 0}, }\item[{int}]{WTA\+\_\+\+K\+\_\+}{ = {\ttfamily 2}, }\item[{cv\+::\+ORB\+::\+Score\+Type}]{score\+Type\+\_\+}{ = {\ttfamily cv\+:\+:ORB\+:\+:HARRIS\+\_\+SCORE}, }\item[{int}]{patch\+Size\+\_\+}{ = {\ttfamily 30}, }\item[{int}]{fast\+Threshold\+\_\+}{ = {\ttfamily 50}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create Shared Pointer of \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} object. 
+
+\begin{DoxyReturn}{Returns}
+Shared Pointer of \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_a3018cd47a7ab78813ba745b5268e7717}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!getFastThreshold@{getFastThreshold}}
+\index{getFastThreshold@{getFastThreshold}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+\doxysubsubsection{\texorpdfstring{getFastThreshold()}{getFastThreshold()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1OrbWrapper_a3018cd47a7ab78813ba745b5268e7717} 
+int String\+SLAM\+::\+Orb\+Wrapper\+::get\+Fast\+Threshold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get fast threshold specified from initialization. 
+
+\begin{DoxyReturn}{Returns}
+Fast Threshold Parameter 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_a1757ea442ac356ad7209a50416b5d3a1}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!getMaxFeatures@{getMaxFeatures}}
+\index{getMaxFeatures@{getMaxFeatures}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+\doxysubsubsection{\texorpdfstring{getMaxFeatures()}{getMaxFeatures()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1OrbWrapper_a1757ea442ac356ad7209a50416b5d3a1} 
+int String\+SLAM\+::\+Orb\+Wrapper\+::get\+Max\+Features (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the max features specified from initialization. 
+
+\begin{DoxyReturn}{Returns}
+Max ORB Features 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/core.\+hpp\end{DoxyCompactItemize}

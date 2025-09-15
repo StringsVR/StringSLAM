@@ -1,0 +1,104 @@
+\doxysection{String\+SLAM\+::Camera\+Distortion Struct Reference}
+\hypertarget{structStringSLAM_1_1CameraDistortion}{}\label{structStringSLAM_1_1CameraDistortion}\index{StringSLAM::CameraDistortion@{StringSLAM::CameraDistortion}}
+
+
+Stores the distortion parameters of a camera.  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structStringSLAM_1_1CameraDistortion_a9b9f0ce23f833d5c0c61d1f5c02bed58}{Camera\+Distortion}} (double k1\+\_\+=0.\+0, double k2\+\_\+=0.\+0, double k3\+\_\+=0.\+0, double p1\+\_\+=0.\+0, double p2\+\_\+=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a distortion profile within the given parameters. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{structStringSLAM_1_1CameraDistortion_a03bb772ba5b09061ae2c668c32b03eba}{getD}} () const
+\begin{DoxyCompactList}\small\item\em Returns the camera distortion matrix D (1x8). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_a89468d385f496ffc2a1a7eaaa63d1dd8}\label{structStringSLAM_1_1CameraDistortion_a89468d385f496ffc2a1a7eaaa63d1dd8} 
+double {\bfseries k1} = 0.\+0
+\begin{DoxyCompactList}\small\item\em First-\/\+Order radial distortion value. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_af987447af0ab7d8e2eea3d52e107dbab}\label{structStringSLAM_1_1CameraDistortion_af987447af0ab7d8e2eea3d52e107dbab} 
+double {\bfseries k2} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Second-\/\+Order radial distortion value (Corrects K1 curvature) \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_abf6c4b3038a9c22afea5db10b18bbb3a}\label{structStringSLAM_1_1CameraDistortion_abf6c4b3038a9c22afea5db10b18bbb3a} 
+double {\bfseries k3} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Third-\/\+Order radial distortion value (Fine tunes the distortion correction) \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_a04d9141d900694e061632377989652dd}\label{structStringSLAM_1_1CameraDistortion_a04d9141d900694e061632377989652dd} 
+double {\bfseries k4} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Optional higher-\/order term for correct Fish-\/\+Eye lenses. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_aaa620a3567511b5620042a6c9fe000aa}\label{structStringSLAM_1_1CameraDistortion_aaa620a3567511b5620042a6c9fe000aa} 
+double {\bfseries k5} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Optional higher-\/order term for correct Fish-\/\+Eye lenses. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_ad3f7ce8dbce44dc324906ec2b595427f}\label{structStringSLAM_1_1CameraDistortion_ad3f7ce8dbce44dc324906ec2b595427f} 
+double {\bfseries k6} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Optional higher-\/order term for correct Fish-\/\+Eye lenses. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_aff50f0b660acbff2327e2b9dc178a196}\label{structStringSLAM_1_1CameraDistortion_aff50f0b660acbff2327e2b9dc178a196} 
+double {\bfseries p1} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Tangential distortion across the X-\/axis. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_a641399957d1388ce9ec493bcb7295d4a}\label{structStringSLAM_1_1CameraDistortion_a641399957d1388ce9ec493bcb7295d4a} 
+double {\bfseries p2} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Tangential distortion across the Y-\/axis. \end{DoxyCompactList}\item 
+\Hypertarget{structStringSLAM_1_1CameraDistortion_abd5ddbbee9f7d8e54aee855f70ffa24e}\label{structStringSLAM_1_1CameraDistortion_abd5ddbbee9f7d8e54aee855f70ffa24e} 
+cv\+::\+Mat {\bfseries R} = cv\+::\+Mat\+::eye(3, 3, CV\+\_\+64F)
+\begin{DoxyCompactList}\small\item\em Rectification rotation (Typically will be a identity 3x3 matrix in monocular) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores the distortion parameters of a camera. 
+
+The distortion parameters define the distortional coefficients of a camera. Such as radial or tangential. 
+
+\label{doc-constructors}
+\Hypertarget{structStringSLAM_1_1CameraDistortion_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structStringSLAM_1_1CameraDistortion_a9b9f0ce23f833d5c0c61d1f5c02bed58}\index{StringSLAM::CameraDistortion@{StringSLAM::CameraDistortion}!CameraDistortion@{CameraDistortion}}
+\index{CameraDistortion@{CameraDistortion}!StringSLAM::CameraDistortion@{StringSLAM::CameraDistortion}}
+\doxysubsubsection{\texorpdfstring{CameraDistortion()}{CameraDistortion()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1CameraDistortion_a9b9f0ce23f833d5c0c61d1f5c02bed58} 
+String\+SLAM\+::\+Camera\+Distortion\+::\+Camera\+Distortion (\begin{DoxyParamCaption}\item[{double}]{k1\+\_\+}{ = {\ttfamily 0.0}, }\item[{double}]{k2\+\_\+}{ = {\ttfamily 0.0}, }\item[{double}]{k3\+\_\+}{ = {\ttfamily 0.0}, }\item[{double}]{p1\+\_\+}{ = {\ttfamily 0.0}, }\item[{double}]{p2\+\_\+}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a distortion profile within the given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k1\+\_\+} & First-\/\+Order radial distortion \\
+\hline
+{\em k2\+\_\+} & Second-\/\+Order radial distortion \\
+\hline
+{\em k3\+\_\+} & Third-\/\+Order radial distortion \\
+\hline
+{\em p1\+\_\+} & X-\/\+Axis tangential distortion \\
+\hline
+{\em p2\+\_\+} & Y-\/\+Axis tangential distortion \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{structStringSLAM_1_1CameraDistortion_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structStringSLAM_1_1CameraDistortion_a03bb772ba5b09061ae2c668c32b03eba}\index{StringSLAM::CameraDistortion@{StringSLAM::CameraDistortion}!getD@{getD}}
+\index{getD@{getD}!StringSLAM::CameraDistortion@{StringSLAM::CameraDistortion}}
+\doxysubsubsection{\texorpdfstring{getD()}{getD()}}
+{\footnotesize\ttfamily \label{structStringSLAM_1_1CameraDistortion_a03bb772ba5b09061ae2c668c32b03eba} 
+cv\+::\+Mat String\+SLAM\+::\+Camera\+Distortion\+::getD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the camera distortion matrix D (1x8). 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat The 1x8 distortion matrix 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/core.\+hpp\end{DoxyCompactItemize}

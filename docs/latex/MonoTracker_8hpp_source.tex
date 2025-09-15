@@ -1,0 +1,51 @@
+\doxysection{Mono\+Tracker.\+hpp}
+\hypertarget{MonoTracker_8hpp_source}{}\label{MonoTracker_8hpp_source}\index{include/StringSLAM/Tracker/MonoTracker.hpp@{include/StringSLAM/Tracker/MonoTracker.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}StringSLAM/core.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <opencv2/videoio.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }StringSLAM::Tracker}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a24de0468f8b618e898ffe5158cdc2fdd}{MonoTracker}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{CameraModel}}\ cm;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Below\ are\ private\ variables\ not\ specified\ but\ used\ in\ class.\ -\/-\/}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ OpenCV's\ object\ for\ camera\ capture}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ cv::VideoCapture\ cap;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Optimized\ maps\ for\ undistortion\ in\ real\ time.}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ cv::Mat\ m1,\ m2,\ kD;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a24de0468f8b618e898ffe5158cdc2fdd}{MonoTracker}}(\textcolor{keywordtype}{int}\ id\_,\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{CameraModel}}\ cm\_);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a24de0468f8b618e898ffe5158cdc2fdd}{\string~MonoTracker}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a662758dd21aee48014602b3f12dad8f3}{open}}()\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cap.open(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a4970eefb4acb4f3d5e5576699bfa65c1}{release}}()\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ cap.release();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a4dcb050dcce2a98d2398a7eddc576794}{read}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a2899a3f094c85bce5f188941c8b8a5ce}{readUndistorted}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_abd5cb271898e4bdf83dfae5e0a20efdc}{getFPS}}()\ \{\ \textcolor{keywordflow}{return}\ cap.get(cv::CAP\_PROP\_FPS);\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{CameraModel}}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_aaa9e94f1be79d9a0e5c4b34d5f4c27e5}{getCameraModel}}()\ \{\ \textcolor{keywordflow}{return}\ cm;\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<MonoTracker>\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a1e02625105ccbc65212a2958887355f3}{create}}(\textcolor{keywordtype}{int}\ id\_,\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{CameraModel}}\ cm\_)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<MonoTracker>(id\_,\ cm\_);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \};}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM::Feature}}
+
+\end{DoxyCode}
