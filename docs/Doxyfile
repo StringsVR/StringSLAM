@@ -195,7 +195,7 @@ INPUT_FILTER           =
 FILTER_PATTERNS        =
 FILTER_SOURCE_FILES    = NO
 FILTER_SOURCE_PATTERNS =
-USE_MDFILE_AS_MAINPAGE = 
+USE_MDFILE_AS_MAINPAGE = examples/docs/index.md
 IMPLICIT_DIR_DOCS      = YES
 FORTRAN_COMMENT_AFTER  = 72
 #---------------------------------------------------------------------------

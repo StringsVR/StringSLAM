@@ -65,7 +65,7 @@ int main() {
 
             // Draw matches on the output image
             if (!matches.empty()) 
-                featureFinder->drawMatch(tempFrame, prevFrame, matches, output);
+                featureFinder->drawMatches(tempFrame, prevFrame, matches, output);
         }
 
         // Display the frame

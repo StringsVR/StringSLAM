@@ -85,4 +85,9 @@ namespace StringSLAM::Feature
 
         return matches;
     }
+
+    void FeatureFinder::drawMatches(Frame &frame1, Frame &frame2, std::vector<cv::DMatch> matches, cv::Mat &out) {
+        cv::drawMatches(frame1.frame, frame1.kp, frame2.frame, frame2.kp, matches, out);
+    }
+
 } // namespace StringSLAM::Feature

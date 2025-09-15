@@ -66,6 +66,15 @@ namespace StringSLAM::Feature
         const std::vector<cv::DMatch> matchFramesLK(Frame &f1, Frame &f2, cv::Size winSize = cv::Size(21, 21), int maxLevel = 3);
 
         /**
+         * @brief Draw matches between 2 frames
+         * @param frame1 Frame 1
+         * @param frame2 Frame 2
+         * @param matches List of matches
+         * @param Mat out
+         */
+        void drawMatches(Frame &frame1, Frame &frame2, std::vector<cv::DMatch> matches, cv::Mat &out);
+
+        /**
          * @brief Create Shared Pointer of FeatureFinder object
          * @return Shared Pointer of FeatureFinder
          */
