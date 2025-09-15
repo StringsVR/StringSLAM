@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['_7efeaturefinder_0',['~FeatureFinder',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html#a092ef17b85484585f3ca3ab81a736196',1,'StringSLAM::Feature::FeatureFinder']]],
-  ['_7emonotracker_1',['~MonoTracker',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a416b4fba2beceb81fd85c10e9d14b546',1,'StringSLAM::Tracker::MonoTracker']]],
-  ['_7eorbwrapper_2',['~OrbWrapper',['../classStringSLAM_1_1OrbWrapper.html#adf993a29521c894cb8bb455e6a16d904',1,'StringSLAM::OrbWrapper']]],
-  ['_7estereosgbmwrapper_3',['~StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html#a3c0741d61f17c6e3d7d43d41fe9bf701',1,'StringSLAM::StereoSGBMWrapper']]],
-  ['_7estereotracker_4',['~StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a20ad0c06310ed66f415de9d5a242197d',1,'StringSLAM::Tracker::StereoTracker']]]
+  ['setposefromtr_0',['setPoseFromTR',['../structStringSLAM_1_1Frame.html#a641aae6ee77ccdac4255e8eb6c4a34e6',1,'StringSLAM::Frame::setPoseFromTR()'],['../structStringSLAM_1_1StereoFrame.html#a5104aeca9566ef0fcf7a284adef83a7b',1,'StringSLAM::StereoFrame::setPoseFromTR()']]],
+  ['settimestamp_1',['setTimestamp',['../structStringSLAM_1_1Frame.html#a67e515632487d1909e416629fb963cda',1,'StringSLAM::Frame::setTimestamp()'],['../structStringSLAM_1_1StereoFrame.html#a2433de2e4ec6aa4b30fb2facd0858917',1,'StringSLAM::StereoFrame::setTimestamp()']]],
+  ['stereocameradistortion_2',['StereoCameraDistortion',['../structStringSLAM_1_1StereoCameraDistortion.html#a5fec958abdbe1a67168d8212f8c9caf2',1,'StringSLAM::StereoCameraDistortion::StereoCameraDistortion(cv::Mat R_, cv::Mat T_)'],['../structStringSLAM_1_1StereoCameraDistortion.html#adadc071c7a39208583944de1420da433',1,'StringSLAM::StereoCameraDistortion::StereoCameraDistortion()=default']]],
+  ['stereosgbmwrapper_3',['StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html#a5c2ced679e3804de4adc97637e5e0610',1,'StringSLAM::StereoSGBMWrapper']]],
+  ['stereotracker_4',['StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a283e7c626db5d2c10f723e1ace3608aa',1,'StringSLAM::Tracker::StereoTracker']]]
 ];

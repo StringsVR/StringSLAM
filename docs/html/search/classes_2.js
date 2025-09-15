@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['monotracker_0',['MonoTracker',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html',1,'StringSLAM::Tracker']]]
+  ['featurefinder_0',['FeatureFinder',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html',1,'StringSLAM::Feature']]],
+  ['frame_1',['Frame',['../structStringSLAM_1_1Frame.html',1,'StringSLAM']]]
 ];

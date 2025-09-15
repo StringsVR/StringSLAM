@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['featurefinder_0',['FeatureFinder',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html#aff8f15ac169bb472d67300dc648f8e09',1,'StringSLAM::Feature::FeatureFinder']]]
+  ['detectandcompute_0',['detectAndCompute',['../classStringSLAM_1_1OrbWrapper.html#ad68a84c3b33f32aa72ad5780c93ebcbe',1,'StringSLAM::OrbWrapper']]],
+  ['drawkeypoint_1',['drawKeypoint',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html#a1408db758feda8c3b76a1a41ce7ba995',1,'StringSLAM::Feature::FeatureFinder']]],
+  ['drawmatches_2',['drawMatches',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html#a6f1b68dfcc26057005957b86643c23d2',1,'StringSLAM::Feature::FeatureFinder']]]
 ];

@@ -7,5 +7,6 @@ var core_8hpp =
     [ "StringSLAM::StereoCameraDistortion", "structStringSLAM_1_1StereoCameraDistortion.html", "structStringSLAM_1_1StereoCameraDistortion" ],
     [ "StringSLAM::StereoFrame", "structStringSLAM_1_1StereoFrame.html", "structStringSLAM_1_1StereoFrame" ],
     [ "StringSLAM::StereoSGBMWrapper", "classStringSLAM_1_1StereoSGBMWrapper.html", "classStringSLAM_1_1StereoSGBMWrapper" ],
-    [ "StringSLAM::OrbWrapper", "classStringSLAM_1_1OrbWrapper.html", "classStringSLAM_1_1OrbWrapper" ]
+    [ "StringSLAM::OrbWrapper", "classStringSLAM_1_1OrbWrapper.html", "classStringSLAM_1_1OrbWrapper" ],
+    [ "StringSLAM::Accelerator", "classStringSLAM_1_1Accelerator.html", "classStringSLAM_1_1Accelerator" ]
 ];

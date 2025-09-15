@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['featurefinder_0',['FeatureFinder',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html',1,'StringSLAM::Feature']]],
-  ['frame_1',['Frame',['../structStringSLAM_1_1Frame.html',1,'StringSLAM']]]
+  ['cameradistortion_0',['CameraDistortion',['../structStringSLAM_1_1CameraDistortion.html',1,'StringSLAM']]],
+  ['cameraintrinsic_1',['CameraIntrinsic',['../structStringSLAM_1_1CameraIntrinsic.html',1,'StringSLAM']]],
+  ['cameramodel_2',['CameraModel',['../structStringSLAM_1_1CameraModel.html',1,'StringSLAM']]]
 ];

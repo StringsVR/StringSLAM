@@ -8,6 +8,7 @@ var annotated_dup =
         [ "MonoTracker", "classStringSLAM_1_1Tracker_1_1MonoTracker.html", "classStringSLAM_1_1Tracker_1_1MonoTracker" ],
         [ "StereoTracker", "classStringSLAM_1_1Tracker_1_1StereoTracker.html", "classStringSLAM_1_1Tracker_1_1StereoTracker" ]
       ] ],
+      [ "Accelerator", "classStringSLAM_1_1Accelerator.html", "classStringSLAM_1_1Accelerator" ],
       [ "CameraDistortion", "structStringSLAM_1_1CameraDistortion.html", "structStringSLAM_1_1CameraDistortion" ],
       [ "CameraIntrinsic", "structStringSLAM_1_1CameraIntrinsic.html", "structStringSLAM_1_1CameraIntrinsic" ],
       [ "CameraModel", "structStringSLAM_1_1CameraModel.html", "structStringSLAM_1_1CameraModel" ],

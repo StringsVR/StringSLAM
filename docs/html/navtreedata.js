@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CMakeCCompilerId_8c.html",
-"structStringSLAM_1_1StereoCameraDistortion.html#ab87b046f674e5714b48bcd0b64565c86"
+"structStringSLAM_1_1StereoCameraDistortion.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

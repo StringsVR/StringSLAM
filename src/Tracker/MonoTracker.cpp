@@ -14,6 +14,11 @@ namespace StringSLAM::Tracker {
         cap.set(cv::CAP_PROP_FRAME_HEIGHT, cm.capSize.height);
     }
 
+    bool MonoTracker::open(int API_PREF) {
+        if (cap.isOpened()) return true;    
+        return cap.open(id, API_PREF);
+    }
+
     void MonoTracker::read(Frame &f) {
         // Make sure camera is opened before capture.
         this->open();

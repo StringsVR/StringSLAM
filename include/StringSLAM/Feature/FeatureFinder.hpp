@@ -32,8 +32,8 @@ namespace StringSLAM::Feature
          * @brief Create constructor for FeatureFinder
          * @param orb_ OrbWrapper
          */
-        FeatureFinder(std::shared_ptr<OrbWrapper> orb_);
-        ~FeatureFinder();
+        FeatureFinder(std::shared_ptr<OrbWrapper> &orb_);
+        ~FeatureFinder() = default;
 
         /**
          * @brief Get keypoints from frame
@@ -45,7 +45,7 @@ namespace StringSLAM::Feature
          * @brief Draw keypoints to frame
          * @return Mat with keypoint
          */
-        void drawKeypoint(Frame &f, cv::Mat &out, cv::Scalar color);
+        void drawKeypoint(Frame &f, cv::Mat &out, cv::Scalar &color);
 
         /**
          * @brief Match descriptions from 2 frames
@@ -72,13 +72,13 @@ namespace StringSLAM::Feature
          * @param matches List of matches
          * @param Mat out
          */
-        void drawMatches(Frame &frame1, Frame &frame2, std::vector<cv::DMatch> matches, cv::Mat &out);
+        void drawMatches(Frame &frame1, Frame &frame2, std::vector<cv::DMatch> &matches, cv::Mat &out);
 
         /**
          * @brief Create Shared Pointer of FeatureFinder object
          * @return Shared Pointer of FeatureFinder
          */
-        static std::shared_ptr<FeatureFinder> create(std::shared_ptr<OrbWrapper> orb_) {
+        static std::shared_ptr<FeatureFinder> create(std::shared_ptr<OrbWrapper> &orb_) {
             return std::make_shared<FeatureFinder>(orb_);
         }
     };

@@ -1,0 +1,117 @@
+\doxysection{String\+SLAM\+::Accelerator Class Reference}
+\hypertarget{classStringSLAM_1_1Accelerator}{}\label{classStringSLAM_1_1Accelerator}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+
+
+A helper class to increase performance.  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Accelerator_abb901a76360560ef4d309c1ed3854285}{Accelerator}} ()=default
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Accelerator_af66d077f7085156c50548106721bdd2c}{\texorpdfstring{$\sim$}{\string~}\+Accelerator}} ()=default
+\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Accelerator_a649e4e795b994f6d7fbf9b4c1322cada}{create\+GPU}} (bool use\+GPU=true, int threads=0)
+\begin{DoxyCompactList}\small\item\em Create GPU context. \end{DoxyCompactList}\item 
+cv\+::ocl\+::\+Context \mbox{\hyperlink{classStringSLAM_1_1Accelerator_a177915b3deb7be208ce27cdc618dbac6}{get\+Context}} () const
+\begin{DoxyCompactList}\small\item\em Get created GPU Context. \end{DoxyCompactList}\item 
+cv\+::ocl\+::\+Device \mbox{\hyperlink{classStringSLAM_1_1Accelerator_ae0bb7000f968b7e6f34303fbf91c3402}{get\+Device}} () const
+\begin{DoxyCompactList}\small\item\em Get created GPU device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Accelerator}{Accelerator}} $>$ \mbox{\hyperlink{classStringSLAM_1_1Accelerator_a8df2516961a56bd1bee8ee24b9cc9a31}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create Shared Pointer of \doxylink{classStringSLAM_1_1Accelerator}{Accelerator} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A helper class to increase performance. 
+
+Find and enables Open\+CV GPU Acceleration. 
+
+\label{doc-constructors}
+\Hypertarget{classStringSLAM_1_1Accelerator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStringSLAM_1_1Accelerator_abb901a76360560ef4d309c1ed3854285}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}!Accelerator@{Accelerator}}
+\index{Accelerator@{Accelerator}!StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+\doxysubsubsection{\texorpdfstring{Accelerator()}{Accelerator()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Accelerator_abb901a76360560ef4d309c1ed3854285} 
+String\+SLAM\+::\+Accelerator\+::\+Accelerator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructs \doxylink{classStringSLAM_1_1Accelerator}{Accelerator} \Hypertarget{classStringSLAM_1_1Accelerator_af66d077f7085156c50548106721bdd2c}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}!````~Accelerator@{\texorpdfstring{$\sim$}{\string~}Accelerator}}
+\index{````~Accelerator@{\texorpdfstring{$\sim$}{\string~}Accelerator}!StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Accelerator()}{\string~Accelerator()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Accelerator_af66d077f7085156c50548106721bdd2c} 
+String\+SLAM\+::\+Accelerator\+::\texorpdfstring{$\sim$}{\string~}\+Accelerator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classStringSLAM_1_1Accelerator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStringSLAM_1_1Accelerator_a8df2516961a56bd1bee8ee24b9cc9a31}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}!create@{create}}
+\index{create@{create}!StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Accelerator_a8df2516961a56bd1bee8ee24b9cc9a31} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Accelerator}{Accelerator}} $>$ String\+SLAM\+::\+Accelerator\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create Shared Pointer of \doxylink{classStringSLAM_1_1Accelerator}{Accelerator} object. 
+
+\begin{DoxyReturn}{Returns}
+Shared Pointer of \doxylink{classStringSLAM_1_1Accelerator}{Accelerator} 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Accelerator_a649e4e795b994f6d7fbf9b4c1322cada}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}!createGPU@{createGPU}}
+\index{createGPU@{createGPU}!StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+\doxysubsubsection{\texorpdfstring{createGPU()}{createGPU()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Accelerator_a649e4e795b994f6d7fbf9b4c1322cada} 
+void String\+SLAM\+::\+Accelerator\+::create\+GPU (\begin{DoxyParamCaption}\item[{bool}]{use\+GPU}{ = {\ttfamily true}, }\item[{int}]{threads}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create GPU context. 
+
+Create GPU Context, enable its usage, and the usage of threads. 
+\begin{DoxyParams}{Parameters}
+{\em use\+GPU} & Enable GPU Acceleration \\
+\hline
+{\em threads} & Specify thread amounts to be used \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Accelerator_a177915b3deb7be208ce27cdc618dbac6}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}!getContext@{getContext}}
+\index{getContext@{getContext}!StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Accelerator_a177915b3deb7be208ce27cdc618dbac6} 
+cv\+::ocl\+::\+Context String\+SLAM\+::\+Accelerator\+::get\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get created GPU Context. 
+
+\begin{DoxyReturn}{Returns}
+GPU Context 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Accelerator_ae0bb7000f968b7e6f34303fbf91c3402}\index{StringSLAM::Accelerator@{StringSLAM::Accelerator}!getDevice@{getDevice}}
+\index{getDevice@{getDevice}!StringSLAM::Accelerator@{StringSLAM::Accelerator}}
+\doxysubsubsection{\texorpdfstring{getDevice()}{getDevice()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Accelerator_ae0bb7000f968b7e6f34303fbf91c3402} 
+cv\+::ocl\+::\+Device String\+SLAM\+::\+Accelerator\+::get\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get created GPU device. 
+
+\begin{DoxyReturn}{Returns}
+GPU Device 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/\mbox{\hyperlink{core_8hpp}{core.\+hpp}}\end{DoxyCompactItemize}

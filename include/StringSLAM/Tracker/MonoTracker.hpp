@@ -33,9 +33,7 @@ namespace StringSLAM::Tracker
          * @brief Open camera tracker.
          * @return Camera opened succesfully
          */
-        inline bool open() {
-            return cap.open(id);
-        }
+        bool open(int API_PREF=cv::CAP_V4L2);
 
         /// Release camera
         inline void release() {

@@ -3,6 +3,7 @@
 #include "opencv2/core/mat.hpp"
 #include "opencv2/core/types.hpp"
 #include <opencv2/core.hpp>
+#include <opencv2/core/ocl.hpp>
 
 namespace StringSLAM
 {
@@ -402,6 +403,7 @@ namespace StringSLAM
      * @brief A wrapper class for OpenCV's ORB.
      */
     class OrbWrapper {
+
         private:
             cv::Ptr<cv::ORB> orb;
         public:
@@ -463,5 +465,65 @@ namespace StringSLAM
                 return std::make_shared<OrbWrapper>(nfeatures_, scaleFactor_, nlevels_, edgeThreshold_, firstLevel_, WTA_K_, scoreType_, patchSize_, fastThreshold_);
             };
 
+    };
+
+    /**
+     * @brief A helper class to increase performance.
+     * 
+     * Find and enables OpenCV GPU Acceleration.
+     */
+    class Accelerator
+    {
+    private:
+        cv::ocl::Context context;   // Device Context
+        cv::ocl::Device device;     // Actual Device
+
+    public:
+        /**
+         * Constructs Accelerator
+         */
+        Accelerator() = default;
+        ~Accelerator() = default;
+
+        /**
+         * @brief Create GPU context
+         * 
+         * Create GPU Context, enable its usage, and the usage of threads.
+         * @param useGPU Enable GPU Acceleration
+         * @param threads Specify thread amounts to be used
+         */
+        void createGPU(bool useGPU = true, int threads = 0) {
+            // Set Optimizations to true or false
+            cv::setNumThreads(threads);
+            cv::setUseOptimized(useGPU);
+            //cv::setUseOpenVX(useGPU);
+
+            // Create context, if it fails return
+            if (!context.create(cv::ocl::Device::TYPE_GPU)) return;
+
+            // Set device to context and enable OpenCL
+            device = context.device(0);
+            cv::ocl::setUseOpenCL(useGPU);
+        };
+
+        /**
+         * @brief Get created GPU Context
+         * @return GPU Context
+         */
+        inline cv::ocl::Context getContext() const { return context; }
+
+        /**
+         * @brief Get created GPU device
+         * @return GPU Device
+         */
+        inline cv::ocl::Device getDevice() const { return device; }
+
+        /**
+         * @brief Create Shared Pointer of Accelerator object
+         * @return Shared Pointer of Accelerator
+         */
+        static inline std::shared_ptr<Accelerator> create() {
+            return std::make_shared<Accelerator>();
+        };
     };
 } // namespace StringSLAM
