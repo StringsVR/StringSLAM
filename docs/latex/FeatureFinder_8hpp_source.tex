@@ -7,7 +7,7 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{core_8hpp}{StringSLAM/core.hpp}}"{}}}
 \DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceStringSLAM_1_1Feature}{StringSLAM::Feature}}}
 \DoxyCodeLine{00005\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{FeatureFinder}}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a5835ca92a0dadc46a3a5a6b596699bef}{FeatureFinder}}}
 \DoxyCodeLine{00013\ \ \ \ \ \{}
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ORB\ object\ specified\ in\ contructor}}
@@ -26,20 +26,20 @@
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::vector<cv::DMatch>\ matches;}
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{FeatureFinder}}(std::shared\_ptr<OrbWrapper>\ orb\_);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a5835ca92a0dadc46a3a5a6b596699bef}{FeatureFinder}}(std::shared\_ptr<OrbWrapper>\ \&orb\_);}
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_af01b310dc757ad7009f824a79adb2716}{\string~FeatureFinder}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00037\ }
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ad1d11bf45e717354de1a2900821a5d44}{getKeypoints}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f);}
 \DoxyCodeLine{00043\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda8c3b76a1a41ce7ba995}{drawKeypoint}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f,\ cv::Mat\ \&out,\ cv::Scalar\ color);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ae33e690739e5186cf0e293da211203ad}{drawKeypoint}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f,\ cv::Mat\ \&out,\ cv::Scalar\ \&color);}
 \DoxyCodeLine{00049\ }
 \DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<cv::DMatch>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a98c7f84b1baf4427f0bc3064f5d93a14}{matchFrames}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f1,\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f2);}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<cv::DMatch>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ab065fdfa75368ba4eb3b6818e0984294}{matchFramesLK}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f1,\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&f2,\ cv::Size\ winSize\ =\ cv::Size(21,\ 21),\ \textcolor{keywordtype}{int}\ maxLevel\ =\ 3);}
 \DoxyCodeLine{00067\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a6f1b68dfcc26057005957b86643c23d2}{drawMatches}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&frame1,\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&frame2,\ std::vector<cv::DMatch>\ matches,\ cv::Mat\ \&out);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ad290d26fddd813f0e0da41d92e7d8bc5}{drawMatches}}(\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&frame1,\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\ \&frame2,\ std::vector<cv::DMatch>\ \&matches,\ cv::Mat\ \&out);}
 \DoxyCodeLine{00076\ }
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<FeatureFinder>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_af838b45963913fb7a38a049a224a9622}{create}}(std::shared\_ptr<OrbWrapper>\ orb\_)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<FeatureFinder>\ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ac122437e41b41a888435f28be034eec0}{create}}(std::shared\_ptr<OrbWrapper>\ \&orb\_)\ \{}
 \DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<FeatureFinder>(orb\_);}
 \DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00084\ \ \ \ \ \};}

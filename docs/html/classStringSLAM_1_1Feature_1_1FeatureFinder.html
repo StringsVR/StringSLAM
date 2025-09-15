@@ -99,31 +99,31 @@ $(function(){initNavTree('classStringSLAM_1_1Feature_1_1FeatureFinder.html','','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff8f15ac169bb472d67300dc648f8e09" id="r_aff8f15ac169bb472d67300dc648f8e09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8f15ac169bb472d67300dc648f8e09">FeatureFinder</a> (std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt; orb_)</td></tr>
-<tr class="memdesc:aff8f15ac169bb472d67300dc648f8e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create constructor for <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html" title="Class meant for handling point detection.">FeatureFinder</a>.  <br /></td></tr>
+<tr class="memitem:a5835ca92a0dadc46a3a5a6b596699bef" id="r_a5835ca92a0dadc46a3a5a6b596699bef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5835ca92a0dadc46a3a5a6b596699bef">FeatureFinder</a> (std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt; &amp;orb_)</td></tr>
+<tr class="memdesc:a5835ca92a0dadc46a3a5a6b596699bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create constructor for <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html" title="Class meant for handling point detection.">FeatureFinder</a>.  <br /></td></tr>
 <tr class="memitem:af01b310dc757ad7009f824a79adb2716" id="r_af01b310dc757ad7009f824a79adb2716"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01b310dc757ad7009f824a79adb2716">~FeatureFinder</a> ()=default</td></tr>
 <tr class="memitem:ad1d11bf45e717354de1a2900821a5d44" id="r_ad1d11bf45e717354de1a2900821a5d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1d11bf45e717354de1a2900821a5d44">getKeypoints</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f)</td></tr>
 <tr class="memdesc:ad1d11bf45e717354de1a2900821a5d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get keypoints from frame.  <br /></td></tr>
-<tr class="memitem:a1408db758feda8c3b76a1a41ce7ba995" id="r_a1408db758feda8c3b76a1a41ce7ba995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1408db758feda8c3b76a1a41ce7ba995">drawKeypoint</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f, cv::Mat &amp;out, cv::Scalar color)</td></tr>
-<tr class="memdesc:a1408db758feda8c3b76a1a41ce7ba995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw keypoints to frame.  <br /></td></tr>
+<tr class="memitem:ae33e690739e5186cf0e293da211203ad" id="r_ae33e690739e5186cf0e293da211203ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae33e690739e5186cf0e293da211203ad">drawKeypoint</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f, cv::Mat &amp;out, cv::Scalar &amp;color)</td></tr>
+<tr class="memdesc:ae33e690739e5186cf0e293da211203ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw keypoints to frame.  <br /></td></tr>
 <tr class="memitem:a98c7f84b1baf4427f0bc3064f5d93a14" id="r_a98c7f84b1baf4427f0bc3064f5d93a14"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; cv::DMatch &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98c7f84b1baf4427f0bc3064f5d93a14">matchFrames</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f1, <a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f2)</td></tr>
 <tr class="memdesc:a98c7f84b1baf4427f0bc3064f5d93a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match descriptions from 2 frames.  <br /></td></tr>
 <tr class="memitem:ab065fdfa75368ba4eb3b6818e0984294" id="r_ab065fdfa75368ba4eb3b6818e0984294"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; cv::DMatch &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab065fdfa75368ba4eb3b6818e0984294">matchFramesLK</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f1, <a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f2, cv::Size winSize=cv::Size(21, 21), int maxLevel=3)</td></tr>
 <tr class="memdesc:ab065fdfa75368ba4eb3b6818e0984294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match descriptors from 2 frames using Lucas–Kanade (speedy)  <br /></td></tr>
-<tr class="memitem:a6f1b68dfcc26057005957b86643c23d2" id="r_a6f1b68dfcc26057005957b86643c23d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f1b68dfcc26057005957b86643c23d2">drawMatches</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;frame1, <a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;frame2, std::vector&lt; cv::DMatch &gt; matches, cv::Mat &amp;out)</td></tr>
-<tr class="memdesc:a6f1b68dfcc26057005957b86643c23d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw matches between 2 frames.  <br /></td></tr>
+<tr class="memitem:ad290d26fddd813f0e0da41d92e7d8bc5" id="r_ad290d26fddd813f0e0da41d92e7d8bc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad290d26fddd813f0e0da41d92e7d8bc5">drawMatches</a> (<a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;frame1, <a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;frame2, std::vector&lt; cv::DMatch &gt; &amp;matches, cv::Mat &amp;out)</td></tr>
+<tr class="memdesc:ad290d26fddd813f0e0da41d92e7d8bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw matches between 2 frames.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af838b45963913fb7a38a049a224a9622" id="r_af838b45963913fb7a38a049a224a9622"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html">FeatureFinder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af838b45963913fb7a38a049a224a9622">create</a> (std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt; orb_)</td></tr>
-<tr class="memdesc:af838b45963913fb7a38a049a224a9622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Shared Pointer of <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html" title="Class meant for handling point detection.">FeatureFinder</a> object.  <br /></td></tr>
+<tr class="memitem:ac122437e41b41a888435f28be034eec0" id="r_ac122437e41b41a888435f28be034eec0"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html">FeatureFinder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac122437e41b41a888435f28be034eec0">create</a> (std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt; &amp;orb_)</td></tr>
+<tr class="memdesc:ac122437e41b41a888435f28be034eec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Shared Pointer of <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html" title="Class meant for handling point detection.">FeatureFinder</a> object.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class meant for handling point detection. </p>
 <p>A Class Utility meant to be used to find keypoints and descriptors in a frame. Also, to match descriptors between 2 frames </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aff8f15ac169bb472d67300dc648f8e09" name="aff8f15ac169bb472d67300dc648f8e09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff8f15ac169bb472d67300dc648f8e09">&#9670;&#160;</a></span>FeatureFinder()</h2>
+<a id="a5835ca92a0dadc46a3a5a6b596699bef" name="a5835ca92a0dadc46a3a5a6b596699bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5835ca92a0dadc46a3a5a6b596699bef">&#9670;&#160;</a></span>FeatureFinder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +131,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">StringSLAM::Feature::FeatureFinder::FeatureFinder </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>orb_</em></span></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>orb_</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -173,8 +173,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="af838b45963913fb7a38a049a224a9622" name="af838b45963913fb7a38a049a224a9622"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af838b45963913fb7a38a049a224a9622">&#9670;&#160;</a></span>create()</h2>
+<a id="ac122437e41b41a888435f28be034eec0" name="ac122437e41b41a888435f28be034eec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac122437e41b41a888435f28be034eec0">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +185,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1Feature_1_1FeatureFinder.html">FeatureFinder</a> &gt; StringSLAM::Feature::FeatureFinder::create </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>orb_</em></span></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>orb_</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -201,8 +201,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1408db758feda8c3b76a1a41ce7ba995" name="a1408db758feda8c3b76a1a41ce7ba995"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1408db758feda8c3b76a1a41ce7ba995">&#9670;&#160;</a></span>drawKeypoint()</h2>
+<a id="ae33e690739e5186cf0e293da211203ad" name="ae33e690739e5186cf0e293da211203ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33e690739e5186cf0e293da211203ad">&#9670;&#160;</a></span>drawKeypoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +220,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cv::Scalar</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+          <td class="paramtype">cv::Scalar &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -230,8 +230,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f1b68dfcc26057005957b86643c23d2" name="a6f1b68dfcc26057005957b86643c23d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f1b68dfcc26057005957b86643c23d2">&#9670;&#160;</a></span>drawMatches()</h2>
+<a id="ad290d26fddd813f0e0da41d92e7d8bc5" name="ad290d26fddd813f0e0da41d92e7d8bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad290d26fddd813f0e0da41d92e7d8bc5">&#9670;&#160;</a></span>drawMatches()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +249,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; cv::DMatch &gt;</td>          <td class="paramname"><span class="paramname"><em>matches</em></span>, </td>
+          <td class="paramtype">std::vector&lt; cv::DMatch &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>matches</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

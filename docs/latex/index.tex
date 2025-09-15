@@ -47,73 +47,94 @@ Ah yes. Well you see because calling Orb or a few other things while another lib
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{int\ main()\ \{}
+\DoxyCodeLine{\ \ \ \ try\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::shared\_ptr<Accelerator>\ accelerator\ =\ Accelerator::create();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ If\ GPU\ is\ optional,\ skip\ creating\ it\ for\ now.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ accelerator-\/>createGPU(true,\ 10);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cout\ <<\ "{}[INFO]\ Accelerator\ created\ successfully\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \}\ catch\ (const\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ "{}[WARN]\ Accelerator\ init\ threw:\ "{}\ <<\ e.what()\ <<\ "{}\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \}\ catch\ (...)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ "{}[WARN]\ Accelerator\ init\ threw\ unknown\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{\ \ \ \ //\ 1.\ Configure\ the\ camera}
+\DoxyCodeLine{\ \ \ \ //\ 1.\ Configure\ the\ camera\ }
 \DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
 \DoxyCodeLine{\ \ \ \ CameraModel\ cm(}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ CameraIntrinsic(200,\ 200,\ 200,\ 200),\ \ \ \ \ \ \ //\ fx,\ fy,\ cx,\ cy}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ CameraDistortion(15,\ 10,\ 12,\ 2,\ 5),\ \ \ \ \ \ \ //\ k1,\ k2,\ p1,\ p2,\ k3}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ Size(640,\ 480)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ image\ size}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CameraIntrinsic(200.0,\ 200.0,\ 320.0,\ 240.0),\ //\ fx,\ fy,\ cx,\ cy\ (cx/cy\ centered\ for\ 640x480)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CameraDistortion(0.0,\ 0.0,\ 0.0,\ 0.0,\ 0.0),\ \ //\ start\ with\ zero\ distortion\ to\ be\ safe}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Size(640,\ 480)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ image\ size}
 \DoxyCodeLine{\ \ \ \ );}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
 \DoxyCodeLine{\ \ \ \ //\ 2.\ Create\ a\ MonoTracker\ for\ capturing\ frames}
 \DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{\ \ \ \ std::shared\_ptr<Tracker::MonoTracker>\ tracker\ =\ Tracker::MonoTracker::create(0,\ cm);}
+\DoxyCodeLine{\ \ \ \ std::shared\_ptr<Tracker::MonoTracker>\ mt1\ =\ Tracker::MonoTracker::create(0,\ cm);}
+\DoxyCodeLine{\ \ \ \ if\ (!mt1)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ "{}[FATAL]\ Failed\ to\ create\ MonoTracker\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ 1;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ if\ (!mt1-\/>open())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ "{}[WARN]\ mt1-\/>open()\ returned\ false;\ camera\ may\ not\ be\ available\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \}\ else\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cout\ <<\ "{}[INFO]\ Camera\ opened\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{\ \ \ \ //\ 3.\ Initialize\ ORB\ feature\ detector\ and\ FeatureFinder}
+\DoxyCodeLine{\ \ \ \ //\ 3.\ Initialize\ ORB/FeatureFinder\ (kept\ commented\ if\ not\ used)}
 \DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{\ \ \ \ std::shared\_ptr<OrbWrapper>\ orb\ =\ OrbWrapper::create(}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ 800,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ max\ number\ of\ features}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ 1.2f,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ scale\ factor}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ 4,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ number\ of\ levels}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ 30,\ 0,\ 2,\ \ \ //\ edge\ threshold,\ first\ level,\ WTA\_K}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ ORB::HARRIS\_SCORE,\ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ score\ type}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ 32,\ 30\ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ patch\ size,\ fast\ threshold}
-\DoxyCodeLine{\ \ \ \ );}
-\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ std::shared\_ptr<OrbWrapper>\ orb\ =\ OrbWrapper::create(800,\ 1.2f,\ 4,\ 30,\ 0,\ 2,\ cv::ORB::HARRIS\_SCORE,\ 32,\ 30);\ }
 \DoxyCodeLine{\ \ \ \ std::shared\_ptr<Feature::FeatureFinder>\ featureFinder\ =\ Feature::FeatureFinder::create(orb);}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{\ \ \ \ //\ 4.\ Prepare\ frame\ storage}
-\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ std::vector<cv::DMatch>\ matches;}
 \DoxyCodeLine{\ \ \ \ std::deque<Frame>\ frames;}
 \DoxyCodeLine{\ \ \ \ Frame\ tempFrame,\ prevFrame;}
 \DoxyCodeLine{\ \ \ \ Mat\ output;}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{\ \ \ \ //\ 5.\ Main\ loop:\ read\ frames\ and\ track\ features}
-\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
 \DoxyCodeLine{\ \ \ \ for\ (;;)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Keep\ previous\ frame\ if\ available}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!frames.empty())\ prevFrame\ =\ frames.back();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Read\ frame\ from\ camera}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ mt1-\/>read(tempFrame);}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Capture\ new\ frame\ from\ camera}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ tracker-\/>read(tempFrame);}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ output\ =\ tempFrame.frame;}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Detect\ keypoints\ in\ current\ frame}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ featureFinder-\/>getKeypoints(tempFrame);}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Match\ features\ with\ previous\ frame}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!prevFrame.kp.empty())\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ auto\ matches\ =\ featureFinder-\/>matchFramesLK(tempFrame,\ prevFrame);}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ Draw\ matches\ on\ the\ output\ image}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (!matches.empty())\ }
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ featureFinder-\/>drawMatch(tempFrame,\ prevFrame,\ matches,\ output);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Guard:\ did\ we\ actually\ get\ pixels?}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (tempFrame.frame.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ "{}[WARN]\ Empty\ frame\ grabbed.\ Skipping\ iteration.\(\backslash\)n"{};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ small\ sleep\ to\ avoid\ a\ hot\ loop\ when\ camera\ fails}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cv::waitKey(10);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ continue;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Display\ the\ frame}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ imshow("{}Viewer"{},\ output);}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ waitKey(tracker-\/>getFPS());}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ If\ the\ frame\ list\ isn't\ empty\ then\ get\ prev\ frame.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!frames.empty())\ prevFrame\ =\ frames.back();}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Only\ store\ frames\ that\ have\ keypoints}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ output\ =\ tempFrame.frame.clone();\ //\ clone\ to\ avoid\ aliasing\ issues}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Safety\ checks\ before\ any\ feature\ operations}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (featureFinder)\ featureFinder-\/>getKeypoints(tempFrame);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!prevFrame.kp.empty()\ \&\&\ !tempFrame.kp.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ matches\ =\ featureFinder-\/>matchFramesLK(prevFrame,\ tempFrame);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!matches.empty()\ \&\&\ !prevFrame.kp.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ featureFinder-\/>drawMatches(prevFrame,\ tempFrame,\ matches,\ output);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ show\ only\ if\ not\ empty}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!output.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cv::imshow("{}Viewer"{},\ output);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ int\ k\ =\ cv::waitKey(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (k\ ==\ 27)\ break;\ //\ Esc\ to\ quit}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Only\ add\ frame\ if\ it\ has\ keypoints\ (or\ at\ least\ image\ data)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!tempFrame.kp.empty())}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ frames.push\_back(tempFrame);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ else}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ;\ //\ nothing}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Limit\ frame\ history\ to\ 45\ frames}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ If\ more\ than\ 45\ frames\ remove\ the\ first\ one}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (frames.size()\ >\ 45)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ frames.pop\_front();}
 \DoxyCodeLine{\ \ \ \ \}}
