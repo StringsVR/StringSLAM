@@ -1,49 +1,50 @@
 \doxysection{Stereo\+Tracker.\+hpp}
 \hypertarget{StereoTracker_8hpp_source}{}\label{StereoTracker_8hpp_source}\index{include/StringSLAM/Tracker/StereoTracker.hpp@{include/StringSLAM/Tracker/StereoTracker.hpp}}
-
+\mbox{\hyperlink{StereoTracker_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}StringSLAM/Tracker/MonoTracker.hpp"{}}}
-\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }StringSLAM::Tracker}
-\DoxyCodeLine{00005\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a283e7c626db5d2c10f723e1ace3608aa}{StereoTracker}}}
-\DoxyCodeLine{00010\ \ \ \ \ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Specified\ Trackers\ that\ create\ Stereo}}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ mt1,\ mt2;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Stereo\ Distortion}}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}\ scd;}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SGBM\ Matcher\ for\ stereo\ computation,\ SBM\ is\ also\ a\ option\ but\ thats\ TODO.}}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{StereoSGBMWrapper}}\ sgbm;}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Below\ are\ private\ variables\ not\ specified\ but\ used\ in\ class.\ -\/-\/}}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rectified\ Stereo\ correction\ map}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ cv::Mat\ m1x,\ m1y,\ m2x,\ m2y;}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a283e7c626db5d2c10f723e1ace3608aa}{StereoTracker}}(\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ \&mt1\_,\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ \&mt2\_,\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}\ \&scd\_,\ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{StereoSGBMWrapper}}\ \&sgbm\_);}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a283e7c626db5d2c10f723e1ace3608aa}{\string~StereoTracker}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_afad8c1da95dc55f4d5133a180e8499ab}{open}}()\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (mt1.open()\ \&\&\ mt2.open());}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8}{release}}()\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ mt1.release();}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ mt2.release();}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a72d25299479bcf0e0e581c7b7ad5c112}{read}}(\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \&sf);}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a286b0025e7f58da8b79ed94948965857}{readDepth}}(\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \&sf);}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<StereoTracker>\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_aa5dda94cae92fb1d26039a50252097e0}{create}}(\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ mt1\_,\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ mt2\_,\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}\ scd\_)\ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<StereoTracker>(mt1\_,\ mt2\_,\ scd\_);}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00067\ \ \ \ \ \};}
-\DoxyCodeLine{00068\ \ \ \ \ }
-\DoxyCodeLine{00069\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM::Tracker}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MonoTracker_8hpp}{StringSLAM/Tracker/MonoTracker.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{core_8hpp}{StringSLAM/core.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceStringSLAM_1_1Tracker}{StringSLAM::Tracker}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a283e7c626db5d2c10f723e1ace3608aa}{StereoTracker}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Specified\ Trackers\ that\ create\ Stereo}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ mt1,\ mt2;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Stereo\ Distortion}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}\ scd;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SGBM\ Matcher\ for\ stereo\ computation,\ SBM\ is\ also\ a\ option\ but\ thats\ TODO.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{StereoSGBMWrapper}}\ sgbm;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Below\ are\ private\ variables\ not\ specified\ but\ used\ in\ class.\ -\/-\/}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rectified\ Stereo\ correction\ map}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ cv::Mat\ m1x,\ m1y,\ m2x,\ m2y;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a283e7c626db5d2c10f723e1ace3608aa}{StereoTracker}}(\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ \&mt1\_,\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ \&mt2\_,\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}\ \&scd\_,\ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{StereoSGBMWrapper}}\ \&sgbm\_);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a20ad0c06310ed66f415de9d5a242197d}{\string~StereoTracker}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_afad8c1da95dc55f4d5133a180e8499ab}{open}}()\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (mt1.open()\ \&\&\ mt2.open());}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8}{release}}()\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ mt1.release();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ mt2.release();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a72d25299479bcf0e0e581c7b7ad5c112}{read}}(\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \&sf);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a286b0025e7f58da8b79ed94948965857}{readDepth}}(\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \&sf);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<StereoTracker>\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a92778bf143b2133477311392bb94a2f0}{create}}(\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ \&mt1\_,\ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{MonoTracker}}\ \&mt2\_,\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}\ \&scd\_,\ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{StereoSGBMWrapper}}\ \&sgbm\_)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<StereoTracker>(mt1\_,\ mt2\_,\ scd\_,\ sgbm\_);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \};}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM::Tracker}}
 
 \end{DoxyCode}

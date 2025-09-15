@@ -1,10 +1,10 @@
 var annotated_dup =
 [
-    [ "StringSLAM", null, [
-      [ "Feature", null, [
+    [ "StringSLAM", "namespaceStringSLAM.html", [
+      [ "Feature", "namespaceStringSLAM_1_1Feature.html", [
         [ "FeatureFinder", "classStringSLAM_1_1Feature_1_1FeatureFinder.html", "classStringSLAM_1_1Feature_1_1FeatureFinder" ]
       ] ],
-      [ "Tracker", null, [
+      [ "Tracker", "namespaceStringSLAM_1_1Tracker.html", [
         [ "MonoTracker", "classStringSLAM_1_1Tracker_1_1MonoTracker.html", "classStringSLAM_1_1Tracker_1_1MonoTracker" ],
         [ "StereoTracker", "classStringSLAM_1_1Tracker_1_1StereoTracker.html", "classStringSLAM_1_1Tracker_1_1StereoTracker" ]
       ] ],
@@ -15,6 +15,6 @@ var annotated_dup =
       [ "OrbWrapper", "classStringSLAM_1_1OrbWrapper.html", "classStringSLAM_1_1OrbWrapper" ],
       [ "StereoCameraDistortion", "structStringSLAM_1_1StereoCameraDistortion.html", "structStringSLAM_1_1StereoCameraDistortion" ],
       [ "StereoFrame", "structStringSLAM_1_1StereoFrame.html", "structStringSLAM_1_1StereoFrame" ],
-      [ "StereoSGBMWrapper", "classStringSLAM_1_1StereoSGBMWrapper.html", null ]
+      [ "StereoSGBMWrapper", "classStringSLAM_1_1StereoSGBMWrapper.html", "classStringSLAM_1_1StereoSGBMWrapper" ]
     ] ]
 ];

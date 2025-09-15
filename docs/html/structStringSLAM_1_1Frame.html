@@ -99,9 +99,8 @@ $(function(){initNavTree('structStringSLAM_1_1Frame.html','','structStringSLAM_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a67e515632487d1909e416629fb963cda" id="r_a67e515632487d1909e416629fb963cda"><td class="memItemLeft" align="right" valign="top"><a id="a67e515632487d1909e416629fb963cda" name="a67e515632487d1909e416629fb963cda"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimestamp</b> ()</td></tr>
-<tr class="memdesc:a67e515632487d1909e416629fb963cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set timestamp of <a class="el" href="structStringSLAM_1_1Frame.html" title="Frame data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker).">Frame</a>. <br /></td></tr>
+<tr class="memitem:a67e515632487d1909e416629fb963cda" id="r_a67e515632487d1909e416629fb963cda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e515632487d1909e416629fb963cda">setTimestamp</a> ()</td></tr>
+<tr class="memdesc:a67e515632487d1909e416629fb963cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set timestamp of <a class="el" href="structStringSLAM_1_1Frame.html" title="Frame data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker).">Frame</a>.  <br /></td></tr>
 <tr class="memitem:a2eaca0aae888438f5c06bb1f0c98b8e5" id="r_a2eaca0aae888438f5c06bb1f0c98b8e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eaca0aae888438f5c06bb1f0c98b8e5">copyFrom</a> (const <a class="el" href="structStringSLAM_1_1Frame.html">Frame</a> &amp;f)</td></tr>
 <tr class="memdesc:a2eaca0aae888438f5c06bb1f0c98b8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy <a class="el" href="structStringSLAM_1_1Frame.html" title="Frame data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker).">Frame</a> data into this <a class="el" href="structStringSLAM_1_1Frame.html" title="Frame data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker).">Frame</a>.  <br /></td></tr>
 <tr class="memitem:a641aae6ee77ccdac4255e8eb6c4a34e6" id="r_a641aae6ee77ccdac4255e8eb6c4a34e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a641aae6ee77ccdac4255e8eb6c4a34e6">setPoseFromTR</a> (const cv::Mat &amp;t, const cv::Mat &amp;R)</td></tr>
@@ -111,24 +110,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimestamp</b> ()</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8a84430f3dd4bf1b183f6dc490b7385b" id="r_a8a84430f3dd4bf1b183f6dc490b7385b"><td class="memItemLeft" align="right" valign="top"><a id="a8a84430f3dd4bf1b183f6dc490b7385b" name="a8a84430f3dd4bf1b183f6dc490b7385b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
-<tr class="memdesc:a8a84430f3dd4bf1b183f6dc490b7385b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the frame. <br /></td></tr>
-<tr class="memitem:a80271f14d55dd09e142629d063b205d8" id="r_a80271f14d55dd09e142629d063b205d8"><td class="memItemLeft" align="right" valign="top"><a id="a80271f14d55dd09e142629d063b205d8" name="a80271f14d55dd09e142629d063b205d8"></a>
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b></td></tr>
-<tr class="memdesc:a80271f14d55dd09e142629d063b205d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image set by capture device. <br /></td></tr>
-<tr class="memitem:acfd2e634e9c599ce68ea6cea5d220001" id="r_acfd2e634e9c599ce68ea6cea5d220001"><td class="memItemLeft" align="right" valign="top"><a id="acfd2e634e9c599ce68ea6cea5d220001" name="acfd2e634e9c599ce68ea6cea5d220001"></a>
-std::vector&lt; cv::KeyPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>kp</b></td></tr>
-<tr class="memdesc:acfd2e634e9c599ce68ea6cea5d220001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracted Keypoints from frame. <br /></td></tr>
-<tr class="memitem:a4c56fe36f5113a51fdd768851329ae64" id="r_a4c56fe36f5113a51fdd768851329ae64"><td class="memItemLeft" align="right" valign="top"><a id="a4c56fe36f5113a51fdd768851329ae64" name="a4c56fe36f5113a51fdd768851329ae64"></a>
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>desc</b></td></tr>
-<tr class="memdesc:a4c56fe36f5113a51fdd768851329ae64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches description of this frame compared to another. <br /></td></tr>
-<tr class="memitem:af8de001a64b92ce98578d0e909231a22" id="r_af8de001a64b92ce98578d0e909231a22"><td class="memItemLeft" align="right" valign="top"><a id="af8de001a64b92ce98578d0e909231a22" name="af8de001a64b92ce98578d0e909231a22"></a>
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>pose</b></td></tr>
-<tr class="memdesc:af8de001a64b92ce98578d0e909231a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Real time location of when frame was captured. <br /></td></tr>
-<tr class="memitem:ad627c62f7db843cb08b25db82a1891d1" id="r_ad627c62f7db843cb08b25db82a1891d1"><td class="memItemLeft" align="right" valign="top"><a id="ad627c62f7db843cb08b25db82a1891d1" name="ad627c62f7db843cb08b25db82a1891d1"></a>
-std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><b>timestamp</b></td></tr>
-<tr class="memdesc:ad627c62f7db843cb08b25db82a1891d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp of when frame was captured. <br /></td></tr>
+<tr class="memitem:a8a84430f3dd4bf1b183f6dc490b7385b" id="r_a8a84430f3dd4bf1b183f6dc490b7385b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a84430f3dd4bf1b183f6dc490b7385b">id</a></td></tr>
+<tr class="memdesc:a8a84430f3dd4bf1b183f6dc490b7385b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the frame.  <br /></td></tr>
+<tr class="memitem:a80271f14d55dd09e142629d063b205d8" id="r_a80271f14d55dd09e142629d063b205d8"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80271f14d55dd09e142629d063b205d8">frame</a></td></tr>
+<tr class="memdesc:a80271f14d55dd09e142629d063b205d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image set by capture device.  <br /></td></tr>
+<tr class="memitem:acfd2e634e9c599ce68ea6cea5d220001" id="r_acfd2e634e9c599ce68ea6cea5d220001"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::KeyPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfd2e634e9c599ce68ea6cea5d220001">kp</a></td></tr>
+<tr class="memdesc:acfd2e634e9c599ce68ea6cea5d220001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracted Keypoints from frame.  <br /></td></tr>
+<tr class="memitem:a4c56fe36f5113a51fdd768851329ae64" id="r_a4c56fe36f5113a51fdd768851329ae64"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c56fe36f5113a51fdd768851329ae64">desc</a></td></tr>
+<tr class="memdesc:a4c56fe36f5113a51fdd768851329ae64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches description of this frame compared to another.  <br /></td></tr>
+<tr class="memitem:af8de001a64b92ce98578d0e909231a22" id="r_af8de001a64b92ce98578d0e909231a22"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8de001a64b92ce98578d0e909231a22">pose</a></td></tr>
+<tr class="memdesc:af8de001a64b92ce98578d0e909231a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Real time location of when frame was captured.  <br /></td></tr>
+<tr class="memitem:ad627c62f7db843cb08b25db82a1891d1" id="r_ad627c62f7db843cb08b25db82a1891d1"><td class="memItemLeft" align="right" valign="top">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad627c62f7db843cb08b25db82a1891d1">timestamp</a></td></tr>
+<tr class="memdesc:ad627c62f7db843cb08b25db82a1891d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp of when frame was captured.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structStringSLAM_1_1Frame.html" title="Frame data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker).">Frame</a> data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker). </p>
@@ -243,6 +236,130 @@ std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign=
 
 </div>
 </div>
+<a id="a67e515632487d1909e416629fb963cda" name="a67e515632487d1909e416629fb963cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e515632487d1909e416629fb963cda">&#9670;&#160;</a></span>setTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StringSLAM::Frame::setTimestamp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set timestamp of <a class="el" href="structStringSLAM_1_1Frame.html" title="Frame data object to be handled by a MonoTracker instance. (StringSLAM::Feature::MonoTracker).">Frame</a>. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a4c56fe36f5113a51fdd768851329ae64" name="a4c56fe36f5113a51fdd768851329ae64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c56fe36f5113a51fdd768851329ae64">&#9670;&#160;</a></span>desc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat StringSLAM::Frame::desc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Matches description of this frame compared to another. </p>
+
+</div>
+</div>
+<a id="a80271f14d55dd09e142629d063b205d8" name="a80271f14d55dd09e142629d063b205d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80271f14d55dd09e142629d063b205d8">&#9670;&#160;</a></span>frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat StringSLAM::Frame::frame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Image set by capture device. </p>
+
+</div>
+</div>
+<a id="a8a84430f3dd4bf1b183f6dc490b7385b" name="a8a84430f3dd4bf1b183f6dc490b7385b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a84430f3dd4bf1b183f6dc490b7385b">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StringSLAM::Frame::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ID of the frame. </p>
+
+</div>
+</div>
+<a id="acfd2e634e9c599ce68ea6cea5d220001" name="acfd2e634e9c599ce68ea6cea5d220001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd2e634e9c599ce68ea6cea5d220001">&#9670;&#160;</a></span>kp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;cv::KeyPoint&gt; StringSLAM::Frame::kp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracted Keypoints from frame. </p>
+
+</div>
+</div>
+<a id="af8de001a64b92ce98578d0e909231a22" name="af8de001a64b92ce98578d0e909231a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8de001a64b92ce98578d0e909231a22">&#9670;&#160;</a></span>pose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat StringSLAM::Frame::pose</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Real time location of when frame was captured. </p>
+
+</div>
+</div>
+<a id="ad627c62f7db843cb08b25db82a1891d1" name="ad627c62f7db843cb08b25db82a1891d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad627c62f7db843cb08b25db82a1891d1">&#9670;&#160;</a></span>timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::system_clock::time_point StringSLAM::Frame::timestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timestamp of when frame was captured. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/StringSLAM/<a class="el" href="core_8hpp_source.html">core.hpp</a></li>
 </ul>
@@ -259,7 +376,7 @@ std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign=
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>StringSLAM</b></li><li class="navelem"><a href="structStringSLAM_1_1Frame.html">Frame</a></li>
+    <li class="navelem"><a href="namespaceStringSLAM.html">StringSLAM</a></li><li class="navelem"><a href="structStringSLAM_1_1Frame.html">Frame</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

@@ -10,7 +10,7 @@ namespace StringSLAM::Feature
         matcher = cv::BFMatcher::create(cv::NORM_HAMMING, false);
     }
 
-    void FeatureFinder::getKeypoint(Frame &f) {
+    void FeatureFinder::getKeypoints(Frame &f) {
         // Clear and reserve descriptors and keypoints
         f.kp.clear();
         f.desc.reserve(orb->getMaxFeatures());

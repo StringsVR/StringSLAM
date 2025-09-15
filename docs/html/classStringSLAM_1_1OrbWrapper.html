@@ -101,13 +101,13 @@ $(function(){initNavTree('classStringSLAM_1_1OrbWrapper.html','','classStringSLA
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6476683071324676d0098dae4c0fdc9" id="r_aa6476683071324676d0098dae4c0fdc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6476683071324676d0098dae4c0fdc9">OrbWrapper</a> (int nfeatures, float scaleFactor, int nlevels, int edgeThreshold, int firstLevel, int WTA_K, cv::ORB::ScoreType scoreType, int patchSize, int fastThreshold)</td></tr>
 <tr class="memdesc:aa6476683071324676d0098dae4c0fdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a OpenCV <a class="el" href="classStringSLAM_1_1OrbWrapper.html" title="A wrapper class for OpenCV&#39;s ORB.">OrbWrapper</a>.  <br /></td></tr>
+<tr class="memitem:adf993a29521c894cb8bb455e6a16d904" id="r_adf993a29521c894cb8bb455e6a16d904"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf993a29521c894cb8bb455e6a16d904">~OrbWrapper</a> ()=default</td></tr>
 <tr class="memitem:a1757ea442ac356ad7209a50416b5d3a1" id="r_a1757ea442ac356ad7209a50416b5d3a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1757ea442ac356ad7209a50416b5d3a1">getMaxFeatures</a> () const</td></tr>
 <tr class="memdesc:a1757ea442ac356ad7209a50416b5d3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the max features specified from initialization.  <br /></td></tr>
 <tr class="memitem:a3018cd47a7ab78813ba745b5268e7717" id="r_a3018cd47a7ab78813ba745b5268e7717"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3018cd47a7ab78813ba745b5268e7717">getFastThreshold</a> () const</td></tr>
 <tr class="memdesc:a3018cd47a7ab78813ba745b5268e7717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get fast threshold specified from initialization.  <br /></td></tr>
-<tr class="memitem:ad68a84c3b33f32aa72ad5780c93ebcbe" id="r_ad68a84c3b33f32aa72ad5780c93ebcbe"><td class="memItemLeft" align="right" valign="top"><a id="ad68a84c3b33f32aa72ad5780c93ebcbe" name="ad68a84c3b33f32aa72ad5780c93ebcbe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>detectAndCompute</b> (cv::Mat &amp;img, std::vector&lt; cv::KeyPoint &gt; &amp;kp, cv::Mat &amp;desc)</td></tr>
-<tr class="memdesc:ad68a84c3b33f32aa72ad5780c93ebcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refer to OpenCV doc. <br /></td></tr>
+<tr class="memitem:ad68a84c3b33f32aa72ad5780c93ebcbe" id="r_ad68a84c3b33f32aa72ad5780c93ebcbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad68a84c3b33f32aa72ad5780c93ebcbe">detectAndCompute</a> (cv::Mat &amp;img, std::vector&lt; cv::KeyPoint &gt; &amp;kp, cv::Mat &amp;desc)</td></tr>
+<tr class="memdesc:ad68a84c3b33f32aa72ad5780c93ebcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refer to OpenCV doc.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -184,6 +184,31 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adf993a29521c894cb8bb455e6a16d904" name="adf993a29521c894cb8bb455e6a16d904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf993a29521c894cb8bb455e6a16d904">&#9670;&#160;</a></span>~OrbWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringSLAM::OrbWrapper::~OrbWrapper </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a0510a4d494ea493e480b3379020f39de" name="a0510a4d494ea493e480b3379020f39de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0510a4d494ea493e480b3379020f39de">&#9670;&#160;</a></span>create()</h2>
@@ -249,6 +274,42 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Create Shared Pointer of <a class="el" href="classStringSLAM_1_1OrbWrapper.html" title="A wrapper class for OpenCV&#39;s ORB.">OrbWrapper</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Shared Pointer of <a class="el" href="classStringSLAM_1_1OrbWrapper.html" title="A wrapper class for OpenCV&#39;s ORB.">OrbWrapper</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad68a84c3b33f32aa72ad5780c93ebcbe" name="ad68a84c3b33f32aa72ad5780c93ebcbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68a84c3b33f32aa72ad5780c93ebcbe">&#9670;&#160;</a></span>detectAndCompute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StringSLAM::OrbWrapper::detectAndCompute </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cv::KeyPoint &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>kp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>desc</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refer to OpenCV doc. </p>
 
 </div>
 </div>
@@ -324,7 +385,7 @@ Static Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>StringSLAM</b></li><li class="navelem"><a href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a></li>
+    <li class="navelem"><a href="namespaceStringSLAM.html">StringSLAM</a></li><li class="navelem"><a href="classStringSLAM_1_1OrbWrapper.html">OrbWrapper</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

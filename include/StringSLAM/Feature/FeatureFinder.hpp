@@ -39,7 +39,7 @@ namespace StringSLAM::Feature
          * @brief Get keypoints from frame
          * @return Frame with specified keypoints.
          */
-        void getKeypoint(Frame &f);
+        void getKeypoints(Frame &f);
 
         /**
          * @brief Draw keypoints to frame

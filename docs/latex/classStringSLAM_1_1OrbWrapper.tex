@@ -14,12 +14,13 @@ A wrapper class for Open\+CV\textquotesingle{}s ORB.
 \item 
 \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_aa6476683071324676d0098dae4c0fdc9}{Orb\+Wrapper}} (int nfeatures, float scale\+Factor, int nlevels, int edge\+Threshold, int first\+Level, int WTA\+\_\+K, cv\+::\+ORB\+::\+Score\+Type score\+Type, int patch\+Size, int fast\+Threshold)
 \begin{DoxyCompactList}\small\item\em Construct a Open\+CV \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_adf993a29521c894cb8bb455e6a16d904}{\texorpdfstring{$\sim$}{\string~}\+Orb\+Wrapper}} ()=default
+\item 
 int \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_a1757ea442ac356ad7209a50416b5d3a1}{get\+Max\+Features}} () const
 \begin{DoxyCompactList}\small\item\em Get the max features specified from initialization. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_a3018cd47a7ab78813ba745b5268e7717}{get\+Fast\+Threshold}} () const
 \begin{DoxyCompactList}\small\item\em Get fast threshold specified from initialization. \end{DoxyCompactList}\item 
-\Hypertarget{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe}\label{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe} 
-void {\bfseries detect\+And\+Compute} (cv\+::\+Mat \&img, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&kp, cv\+::\+Mat \&desc)
+void \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe}{detect\+And\+Compute}} (cv\+::\+Mat \&img, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&kp, cv\+::\+Mat \&desc)
 \begin{DoxyCompactList}\small\item\em Refer to Open\+CV doc. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -44,7 +45,13 @@ String\+SLAM\+::\+Orb\+Wrapper\+::\+Orb\+Wrapper (\begin{DoxyParamCaption}\item[
 
 Construct a Open\+CV \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}. 
 
-Same parameters as ORB\+::create(), refer to Open\+CV docs. 
+Same parameters as ORB\+::create(), refer to Open\+CV docs. \Hypertarget{classStringSLAM_1_1OrbWrapper_adf993a29521c894cb8bb455e6a16d904}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!````~OrbWrapper@{\texorpdfstring{$\sim$}{\string~}OrbWrapper}}
+\index{````~OrbWrapper@{\texorpdfstring{$\sim$}{\string~}OrbWrapper}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrbWrapper()}{\string~OrbWrapper()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1OrbWrapper_adf993a29521c894cb8bb455e6a16d904} 
+String\+SLAM\+::\+Orb\+Wrapper\+::\texorpdfstring{$\sim$}{\string~}\+Orb\+Wrapper (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
 
 \label{doc-func-members}
 \Hypertarget{classStringSLAM_1_1OrbWrapper_doc-func-members}
@@ -62,6 +69,16 @@ Create Shared Pointer of \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} 
 \begin{DoxyReturn}{Returns}
 Shared Pointer of \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} 
 \end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!detectAndCompute@{detectAndCompute}}
+\index{detectAndCompute@{detectAndCompute}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
+\doxysubsubsection{\texorpdfstring{detectAndCompute()}{detectAndCompute()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1OrbWrapper_ad68a84c3b33f32aa72ad5780c93ebcbe} 
+void String\+SLAM\+::\+Orb\+Wrapper\+::detect\+And\+Compute (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{img}{, }\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{kp}{, }\item[{cv\+::\+Mat \&}]{desc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Refer to Open\+CV doc. 
+
 \Hypertarget{classStringSLAM_1_1OrbWrapper_a3018cd47a7ab78813ba745b5268e7717}\index{StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}!getFastThreshold@{getFastThreshold}}
 \index{getFastThreshold@{getFastThreshold}!StringSLAM::OrbWrapper@{StringSLAM::OrbWrapper}}
 \doxysubsubsection{\texorpdfstring{getFastThreshold()}{getFastThreshold()}}
@@ -92,4 +109,4 @@ Max ORB Features
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\+String\+SLAM/core.\+hpp\end{DoxyCompactItemize}
+include/\+String\+SLAM/\mbox{\hyperlink{core_8hpp}{core.\+hpp}}\end{DoxyCompactItemize}

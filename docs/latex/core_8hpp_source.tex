@@ -1,6 +1,6 @@
 \doxysection{core.\+hpp}
 \hypertarget{core_8hpp_source}{}\label{core_8hpp_source}\index{include/StringSLAM/core.hpp@{include/StringSLAM/core.hpp}}
-
+\mbox{\hyperlink{core_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}opencv2/calib3d.hpp"{}}}
@@ -8,7 +8,7 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}opencv2/core/types.hpp"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <opencv2/core.hpp>}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }StringSLAM}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceStringSLAM}{StringSLAM}}}
 \DoxyCodeLine{00008\ \{}
 \DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Structs\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{00010\ }
@@ -80,7 +80,7 @@
 \DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_ac443860cdf80f3201ef8cbf936520d70}{CameraModel}}(\mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic}{CameraIntrinsic}}\ cI\_,\ \mbox{\hyperlink{structStringSLAM_1_1CameraDistortion}{CameraDistortion}}\ cD\_,\ cv::Size\ capSize\_)\ :}
 \DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a27b6f7bbe2375a010869ef3a3373bb1e}{cI}}(cI\_),\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a0f2a3021bc657d97eef45432e48d4972}{cD}}(cD\_),\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a93ae15fbac84e5c02d542ae04fd338ca}{capSize}}(capSize\_)\ \{\};}
 \DoxyCodeLine{00147\ }
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_ac443860cdf80f3201ef8cbf936520d70}{CameraModel}}(cv::Size\ capSize\_,\ \mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic}{CameraIntrinsic}}\ cI\_\ =\ \mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic}{CameraIntrinsic}}(),\ \mbox{\hyperlink{structStringSLAM_1_1CameraDistortion}{CameraDistortion}}\ cD\_\ =\ \mbox{\hyperlink{structStringSLAM_1_1CameraDistortion}{CameraDistortion}}())\ :}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a5e6f5589b8cba27e390f650b72c40442}{CameraModel}}(cv::Size\ capSize\_,\ \mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic}{CameraIntrinsic}}\ cI\_\ =\ \mbox{\hyperlink{structStringSLAM_1_1CameraIntrinsic}{CameraIntrinsic}}(),\ \mbox{\hyperlink{structStringSLAM_1_1CameraDistortion}{CameraDistortion}}\ cD\_\ =\ \mbox{\hyperlink{structStringSLAM_1_1CameraDistortion}{CameraDistortion}}())\ :}
 \DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a27b6f7bbe2375a010869ef3a3373bb1e}{cI}}(cI\_),\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a0f2a3021bc657d97eef45432e48d4972}{cD}}(cD\_),\ \mbox{\hyperlink{structStringSLAM_1_1CameraModel_a93ae15fbac84e5c02d542ae04fd338ca}{capSize}}(capSize\_)\ \{\};}
 \DoxyCodeLine{00150\ \ \ \ \ \};}
 \DoxyCodeLine{00151\ }
@@ -124,7 +124,7 @@
 \DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00218\ \ \ \ \ \};}
 \DoxyCodeLine{00219\ }
-\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keyword}{struct\ }StereoCameraDistortion\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_a5fec958abdbe1a67168d8212f8c9caf2}{StereoCameraDistortion}}\ \{}
 \DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ cv::Mat\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_a77c26a6160859d2c60125b0f63dbfe10}{R}};}
 \DoxyCodeLine{00229\ }
 \DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ cv::Mat\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_ad9bb414cd32f73fac81bb77bf41397e6}{T}};}
@@ -139,8 +139,8 @@
 \DoxyCodeLine{00244\ }
 \DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ cv::Mat\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_a30507dc6a88925d82441c82e4c65d368}{Q}};}
 \DoxyCodeLine{00247\ }
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ StereoCameraDistortion(cv::Mat\ R\_,\ cv::Mat\ T\_)\ :\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_a77c26a6160859d2c60125b0f63dbfe10}{R}}(R\_),\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_ad9bb414cd32f73fac81bb77bf41397e6}{T}}(T\_)\ \{\}}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{StereoCameraDistortion}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_a5fec958abdbe1a67168d8212f8c9caf2}{StereoCameraDistortion}}(cv::Mat\ R\_,\ cv::Mat\ T\_)\ :\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_a77c26a6160859d2c60125b0f63dbfe10}{R}}(R\_),\ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_ad9bb414cd32f73fac81bb77bf41397e6}{T}}(T\_)\ \{\}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion_adadc071c7a39208583944de1420da433}{StereoCameraDistortion}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00250\ \ \ \ \ \};}
 \DoxyCodeLine{00251\ }
 \DoxyCodeLine{00255\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \{}
@@ -191,12 +191,12 @@
 \DoxyCodeLine{00326\ }
 \DoxyCodeLine{00327\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Classes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{00328\ }
-\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keyword}{class\ }StereoSGBMWrapper\ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper_a5c2ced679e3804de4adc97637e5e0610}{StereoSGBMWrapper}}\ \{}
 \DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Ptr<cv::StereoSGBM>\ stereo;}
 \DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ cv::Mat\ disp;}
 \DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ StereoSGBMWrapper(}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper_a5c2ced679e3804de4adc97637e5e0610}{StereoSGBMWrapper}}(}
 \DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minDisparity=0,\ }
 \DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numDisparities=16,\ }
 \DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ blockSize=3,\ }
@@ -224,14 +224,14 @@
 \DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
 \DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00364\ }
-\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \string~StereoSGBMWrapper()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper_a3c0741d61f17c6e3d7d43d41fe9bf701}{\string~StereoSGBMWrapper}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00366\ }
-\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ compute(\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \&sf)\ \{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper_a130b101c1c803b0446f79aa93f7e60f6}{compute}}(\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{StereoFrame}}\ \&sf)\ \{}
 \DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stereo-\/>compute(sf.\mbox{\hyperlink{structStringSLAM_1_1StereoFrame_a533167edc9822594fade7f154da22675}{frameLeft}}.\mbox{\hyperlink{structStringSLAM_1_1Frame_a80271f14d55dd09e142629d063b205d8}{frame}},\ sf.\mbox{\hyperlink{structStringSLAM_1_1StereoFrame_adc9a25aeda7f3b9c526369bf1174b21c}{frameRight}}.\mbox{\hyperlink{structStringSLAM_1_1Frame_a80271f14d55dd09e142629d063b205d8}{frame}},\ disp);}
 \DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ disp.convertTo(sf.\mbox{\hyperlink{structStringSLAM_1_1StereoFrame_aab062144ee57c60408e0db4c98a60fd5}{depthFrame}},\ CV\_32F,\ 1.0\ /\ 16.0);}
 \DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00371\ }
-\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::shared\_ptr<StereoSGBMWrapper>\ create(}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::shared\_ptr<StereoSGBMWrapper>\ \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper_a0452846e4ce34de7176fd163ab281743}{create}}(}
 \DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minDisparity=0,\ }
 \DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numDisparities=16,\ }
 \DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ blockSize=3,\ }
@@ -278,7 +278,7 @@
 \DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ orb\ =\ cv::ORB::create(nfeatures,\ scaleFactor,\ nlevels,\ edgeThreshold,\ firstLevel,\ WTA\_K,\ scoreType,\ patchSize,\ fastThreshold);}
 \DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00426\ }
-\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{\string~OrbWrapper}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_adf993a29521c894cb8bb455e6a16d904}{\string~OrbWrapper}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper_a1757ea442ac356ad7209a50416b5d3a1}{getMaxFeatures}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ orb-\/>getMaxFeatures();\ \};}
 \DoxyCodeLine{00434\ }

@@ -14,10 +14,11 @@ A tracking object that works as a camera and returns a \doxylink{structStringSLA
 \item 
 \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a24de0468f8b618e898ffe5158cdc2fdd}{Mono\+Tracker}} (int id\+\_\+, \mbox{\hyperlink{structStringSLAM_1_1CameraModel}{Camera\+Model}} cm\+\_\+)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a416b4fba2beceb81fd85c10e9d14b546}{\texorpdfstring{$\sim$}{\string~}\+Mono\+Tracker}} ()=default
+\item 
 bool \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a662758dd21aee48014602b3f12dad8f3}{open}} ()
 \begin{DoxyCompactList}\small\item\em Open camera tracker. \end{DoxyCompactList}\item 
-\Hypertarget{classStringSLAM_1_1Tracker_1_1MonoTracker_a4970eefb4acb4f3d5e5576699bfa65c1}\label{classStringSLAM_1_1Tracker_1_1MonoTracker_a4970eefb4acb4f3d5e5576699bfa65c1} 
-void {\bfseries release} ()
+void \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a4970eefb4acb4f3d5e5576699bfa65c1}{release}} ()
 \begin{DoxyCompactList}\small\item\em Release camera. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker_a4dcb050dcce2a98d2398a7eddc576794}{read}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
 \begin{DoxyCompactList}\small\item\em Get \doxylink{structStringSLAM_1_1Frame}{Frame} from capture. \end{DoxyCompactList}\item 
@@ -57,6 +58,12 @@ Constructs a \doxylink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}
 {\em cm\+\_\+} & \doxylink{structStringSLAM_1_1CameraModel}{Camera\+Model} for tracker. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Tracker_1_1MonoTracker_a416b4fba2beceb81fd85c10e9d14b546}\index{StringSLAM::Tracker::MonoTracker@{StringSLAM::Tracker::MonoTracker}!````~MonoTracker@{\texorpdfstring{$\sim$}{\string~}MonoTracker}}
+\index{````~MonoTracker@{\texorpdfstring{$\sim$}{\string~}MonoTracker}!StringSLAM::Tracker::MonoTracker@{StringSLAM::Tracker::MonoTracker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MonoTracker()}{\string~MonoTracker()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Tracker_1_1MonoTracker_a416b4fba2beceb81fd85c10e9d14b546} 
+String\+SLAM\+::\+Tracker\+::\+Mono\+Tracker\+::\texorpdfstring{$\sim$}{\string~}\+Mono\+Tracker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
 
 
 \label{doc-func-members}
@@ -140,9 +147,19 @@ Get undistorted frame based off \doxylink{structStringSLAM_1_1CameraModel}{Camer
 \begin{DoxyReturn}{Returns}
 Undistorted \doxylink{structStringSLAM_1_1Frame}{Frame} 
 \end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Tracker_1_1MonoTracker_a4970eefb4acb4f3d5e5576699bfa65c1}\index{StringSLAM::Tracker::MonoTracker@{StringSLAM::Tracker::MonoTracker}!release@{release}}
+\index{release@{release}!StringSLAM::Tracker::MonoTracker@{StringSLAM::Tracker::MonoTracker}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Tracker_1_1MonoTracker_a4970eefb4acb4f3d5e5576699bfa65c1} 
+void String\+SLAM\+::\+Tracker\+::\+Mono\+Tracker\+::release (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Release camera. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+String\+SLAM/\+Tracker/Mono\+Tracker.\+hpp\item 
-src/\+Tracker/Mono\+Tracker.\+cpp\end{DoxyCompactItemize}
+include/\+String\+SLAM/\+Tracker/\mbox{\hyperlink{MonoTracker_8hpp}{Mono\+Tracker.\+hpp}}\item 
+src/\+Tracker/\mbox{\hyperlink{MonoTracker_8cpp}{Mono\+Tracker.\+cpp}}\end{DoxyCompactItemize}

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "StringSLAM/Tracker/MonoTracker.hpp"
+#include "StringSLAM/core.hpp"
 namespace StringSLAM::Tracker
 {
     /**
@@ -61,8 +62,8 @@ namespace StringSLAM::Tracker
          * @brief Create Shared Pointer of StereoTracker object
          * @return Shared Pointer of StereoTracker
          */
-        static std::shared_ptr<StereoTracker> create(MonoTracker mt1_, MonoTracker mt2_, StereoCameraDistortion scd_) {
-            return std::make_shared<StereoTracker>(mt1_, mt2_, scd_);
+        static std::shared_ptr<StereoTracker> create(MonoTracker &mt1_, MonoTracker &mt2_, StereoCameraDistortion &scd_, StereoSGBMWrapper &sgbm_) {
+            return std::make_shared<StereoTracker>(mt1_, mt2_, scd_, sgbm_);
         }
     };
     

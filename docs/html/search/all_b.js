@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['setposefromtr_0',['setPoseFromTR',['../structStringSLAM_1_1Frame.html#a641aae6ee77ccdac4255e8eb6c4a34e6',1,'StringSLAM::Frame::setPoseFromTR()'],['../structStringSLAM_1_1StereoFrame.html#a5104aeca9566ef0fcf7a284adef83a7b',1,'StringSLAM::StereoFrame::setPoseFromTR()']]],
-  ['settimestamp_1',['setTimestamp',['../structStringSLAM_1_1Frame.html#a67e515632487d1909e416629fb963cda',1,'StringSLAM::Frame::setTimestamp()'],['../structStringSLAM_1_1StereoFrame.html#a2433de2e4ec6aa4b30fb2facd0858917',1,'StringSLAM::StereoFrame::setTimestamp()']]],
-  ['stereocameradistortion_2',['StereoCameraDistortion',['../structStringSLAM_1_1StereoCameraDistortion.html',1,'StringSLAM']]],
-  ['stereoframe_3',['StereoFrame',['../structStringSLAM_1_1StereoFrame.html',1,'StringSLAM']]],
-  ['stereosgbmwrapper_4',['StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html',1,'StringSLAM']]],
-  ['stereotracker_5',['StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html',1,'StringSLAM::Tracker::StereoTracker'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a283e7c626db5d2c10f723e1ace3608aa',1,'StringSLAM::Tracker::StereoTracker::StereoTracker()']]]
+  ['of_20opencv_20classes_0',['Why are there weird wrappers of OpenCV classes?',['../md_examples_2docs_2index.html#autotoc_md2',1,'']]],
+  ['open_1',['open',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a662758dd21aee48014602b3f12dad8f3',1,'StringSLAM::Tracker::MonoTracker::open()'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#afad8c1da95dc55f4d5133a180e8499ab',1,'StringSLAM::Tracker::StereoTracker::open()']]],
+  ['opencv_20classes_2',['Why are there weird wrappers of OpenCV classes?',['../md_examples_2docs_2index.html#autotoc_md2',1,'']]],
+  ['orbwrapper_3',['OrbWrapper',['../classStringSLAM_1_1OrbWrapper.html',1,'StringSLAM::OrbWrapper'],['../classStringSLAM_1_1OrbWrapper.html#aa6476683071324676d0098dae4c0fdc9',1,'StringSLAM::OrbWrapper::OrbWrapper()']]],
+  ['overview_4',['Overview',['../md_examples_2docs_2index.html',1,'']]]
 ];

@@ -14,7 +14,9 @@ Class meant for handling point detection.
 \item 
 \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_aff8f15ac169bb472d67300dc648f8e09}{Feature\+Finder}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper}} $>$ orb\+\_\+)
 \begin{DoxyCompactList}\small\item\em Create constructor for \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Feature\+Finder}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e}{get\+Keypoint}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
+\mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a092ef17b85484585f3ca3ab81a736196}{\texorpdfstring{$\sim$}{\string~}\+Feature\+Finder}} ()
+\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ad1d11bf45e717354de1a2900821a5d44}{get\+Keypoints}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
 \begin{DoxyCompactList}\small\item\em Get keypoints from frame. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda8c3b76a1a41ce7ba995}{draw\+Keypoint}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f, cv\+::\+Mat \&out, cv\+::\+Scalar color)
 \begin{DoxyCompactList}\small\item\em Draw keypoints to frame. \end{DoxyCompactList}\item 
@@ -52,6 +54,12 @@ Create constructor for \doxylink{classStringSLAM_1_1Feature_1_1FeatureFinder}{Fe
 {\em orb\+\_\+} & \doxylink{classStringSLAM_1_1OrbWrapper}{Orb\+Wrapper} \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_a092ef17b85484585f3ca3ab81a736196}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!````~FeatureFinder@{\texorpdfstring{$\sim$}{\string~}FeatureFinder}}
+\index{````~FeatureFinder@{\texorpdfstring{$\sim$}{\string~}FeatureFinder}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FeatureFinder()}{\string~FeatureFinder()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_a092ef17b85484585f3ca3ab81a736196} 
+String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::\texorpdfstring{$\sim$}{\string~}\+Feature\+Finder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
 
 
 \label{doc-func-members}
@@ -83,11 +91,11 @@ Draw keypoints to frame.
 \begin{DoxyReturn}{Returns}
 Mat with keypoint 
 \end{DoxyReturn}
-\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!getKeypoint@{getKeypoint}}
-\index{getKeypoint@{getKeypoint}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
-\doxysubsubsection{\texorpdfstring{getKeypoint()}{getKeypoint()}}
-{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_a6bf59d2e0817b786486802ae7d8bfd6e} 
-void String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::get\+Keypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{}\end{DoxyParamCaption})}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_ad1d11bf45e717354de1a2900821a5d44}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!getKeypoints@{getKeypoints}}
+\index{getKeypoints@{getKeypoints}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{getKeypoints()}{getKeypoints()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_ad1d11bf45e717354de1a2900821a5d44} 
+void String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::get\+Keypoints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{}\end{DoxyParamCaption})}
 
 
 
@@ -138,5 +146,5 @@ Match descriptors from 2 frames using Lucas–\+Kanade (speedy)
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+String\+SLAM/\+Feature/Feature\+Finder.\+hpp\item 
-src/\+Feature/Feature\+Finder.\+cpp\end{DoxyCompactItemize}
+include/\+String\+SLAM/\+Feature/\mbox{\hyperlink{FeatureFinder_8hpp}{Feature\+Finder.\+hpp}}\item 
+src/\+Feature/\mbox{\hyperlink{FeatureFinder_8cpp}{Feature\+Finder.\+cpp}}\end{DoxyCompactItemize}

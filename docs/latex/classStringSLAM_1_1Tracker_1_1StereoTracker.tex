@@ -14,10 +14,11 @@ A tracking object classified as a "{}\+Stereo Tracker"{} created by 2 Mono\+Trac
 \item 
 \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a283e7c626db5d2c10f723e1ace3608aa}{Stereo\+Tracker}} (\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} \&mt1\+\_\+, \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} \&mt2\+\_\+, \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{Stereo\+Camera\+Distortion}} \&scd\+\_\+, \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{Stereo\+SGBMWrapper}} \&sgbm\+\_\+)
 \begin{DoxyCompactList}\small\item\em Construct \doxylink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker} from parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a20ad0c06310ed66f415de9d5a242197d}{\texorpdfstring{$\sim$}{\string~}\+Stereo\+Tracker}} ()=default
+\item 
 bool \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_afad8c1da95dc55f4d5133a180e8499ab}{open}} ()
 \begin{DoxyCompactList}\small\item\em Open both mono trackers. \end{DoxyCompactList}\item 
-\Hypertarget{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8}\label{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8} 
-void {\bfseries release} ()
+void \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8}{release}} ()
 \begin{DoxyCompactList}\small\item\em Release cameras. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a72d25299479bcf0e0e581c7b7ad5c112}{read}} (\mbox{\hyperlink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame}} \&sf)
 \begin{DoxyCompactList}\small\item\em Get \doxylink{structStringSLAM_1_1StereoFrame}{Stereo\+Frame} from capture. \end{DoxyCompactList}\item 
@@ -26,7 +27,7 @@ void \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a286b0025e7f58
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker}} $>$ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_aa5dda94cae92fb1d26039a50252097e0}{create}} (\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} mt1\+\_\+, \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} mt2\+\_\+, \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{Stereo\+Camera\+Distortion}} scd\+\_\+)
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker}} $>$ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker_a92778bf143b2133477311392bb94a2f0}{create}} (\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} \&mt1\+\_\+, \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} \&mt2\+\_\+, \mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{Stereo\+Camera\+Distortion}} \&scd\+\_\+, \mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{Stereo\+SGBMWrapper}} \&sgbm\+\_\+)
 \begin{DoxyCompactList}\small\item\em Create Shared Pointer of \doxylink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -55,16 +56,22 @@ Construct \doxylink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker
 {\em scd} & Stereo camera distortion structure \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Tracker_1_1StereoTracker_a20ad0c06310ed66f415de9d5a242197d}\index{StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}!````~StereoTracker@{\texorpdfstring{$\sim$}{\string~}StereoTracker}}
+\index{````~StereoTracker@{\texorpdfstring{$\sim$}{\string~}StereoTracker}!StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StereoTracker()}{\string~StereoTracker()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Tracker_1_1StereoTracker_a20ad0c06310ed66f415de9d5a242197d} 
+String\+SLAM\+::\+Tracker\+::\+Stereo\+Tracker\+::\texorpdfstring{$\sim$}{\string~}\+Stereo\+Tracker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
 
 
 \label{doc-func-members}
 \Hypertarget{classStringSLAM_1_1Tracker_1_1StereoTracker_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classStringSLAM_1_1Tracker_1_1StereoTracker_aa5dda94cae92fb1d26039a50252097e0}\index{StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}!create@{create}}
+\Hypertarget{classStringSLAM_1_1Tracker_1_1StereoTracker_a92778bf143b2133477311392bb94a2f0}\index{StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}!create@{create}}
 \index{create@{create}!StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}}
 \doxysubsubsection{\texorpdfstring{create()}{create()}}
-{\footnotesize\ttfamily \label{classStringSLAM_1_1Tracker_1_1StereoTracker_aa5dda94cae92fb1d26039a50252097e0} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker}} $>$ String\+SLAM\+::\+Tracker\+::\+Stereo\+Tracker\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}}}]{mt1\+\_\+}{, }\item[{\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}}}]{mt2\+\_\+}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{Stereo\+Camera\+Distortion}}}]{scd\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Tracker_1_1StereoTracker_a92778bf143b2133477311392bb94a2f0} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1StereoTracker}{Stereo\+Tracker}} $>$ String\+SLAM\+::\+Tracker\+::\+Stereo\+Tracker\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} \&}]{mt1\+\_\+}{, }\item[{\mbox{\hyperlink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono\+Tracker}} \&}]{mt2\+\_\+}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1StereoCameraDistortion}{Stereo\+Camera\+Distortion}} \&}]{scd\+\_\+}{, }\item[{\mbox{\hyperlink{classStringSLAM_1_1StereoSGBMWrapper}{Stereo\+SGBMWrapper}} \&}]{sgbm\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
@@ -112,9 +119,19 @@ Read depth\+Map from 2 \doxylink{classStringSLAM_1_1Tracker_1_1MonoTracker}{Mono
 \begin{DoxyReturn}{Returns}
 Timestamped, depth calculated frame. 
 \end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8}\index{StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}!release@{release}}
+\index{release@{release}!StringSLAM::Tracker::StereoTracker@{StringSLAM::Tracker::StereoTracker}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Tracker_1_1StereoTracker_ada9cfd286b358dd0ae6449d9d98619f8} 
+void String\+SLAM\+::\+Tracker\+::\+Stereo\+Tracker\+::release (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Release cameras. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+String\+SLAM/\+Tracker/Stereo\+Tracker.\+hpp\item 
-src/\+Tracker/Stereo\+Tracker.\+cpp\end{DoxyCompactItemize}
+include/\+String\+SLAM/\+Tracker/\mbox{\hyperlink{StereoTracker_8hpp}{Stereo\+Tracker.\+hpp}}\item 
+src/\+Tracker/\mbox{\hyperlink{StereoTracker_8cpp}{Stereo\+Tracker.\+cpp}}\end{DoxyCompactItemize}

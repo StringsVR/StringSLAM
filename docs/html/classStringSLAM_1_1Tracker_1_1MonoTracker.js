@@ -1,6 +1,7 @@
 var classStringSLAM_1_1Tracker_1_1MonoTracker =
 [
     [ "MonoTracker", "classStringSLAM_1_1Tracker_1_1MonoTracker.html#a24de0468f8b618e898ffe5158cdc2fdd", null ],
+    [ "~MonoTracker", "classStringSLAM_1_1Tracker_1_1MonoTracker.html#a416b4fba2beceb81fd85c10e9d14b546", null ],
     [ "getCameraModel", "classStringSLAM_1_1Tracker_1_1MonoTracker.html#aaa9e94f1be79d9a0e5c4b34d5f4c27e5", null ],
     [ "getFPS", "classStringSLAM_1_1Tracker_1_1MonoTracker.html#abd5cb271898e4bdf83dfae5e0a20efdc", null ],
     [ "open", "classStringSLAM_1_1Tracker_1_1MonoTracker.html#a662758dd21aee48014602b3f12dad8f3", null ],
