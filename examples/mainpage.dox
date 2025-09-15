@@ -1,0 +1,23 @@
+/** 
+ * \mainpage StringSLAM Quickstart
+ *
+ * \section intro_sec Introduction
+ * StringSLAM is a lightweight SLAM library for low-powered devices.
+ *
+ * \section install_sec Installation
+ * Clone the repo:
+ * \code{.bash}
+ * git clone https://github.com/StringsVR/StringSLAM.git
+ * \endcode
+ *
+ * \section usage_sec Quickstart
+ * Include the header and create a frame:
+ * \code{.cpp}
+ * #include <StringSLAM/core.hpp>
+ * Frame f;
+ * f.load("image.png");
+ * \endcode
+ *
+ * \section examples_sec Examples
+ * See the \ref examples "example folder" for full demos.
+ */
