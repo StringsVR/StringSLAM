@@ -25,13 +25,7 @@
 var NAVTREE =
 [
   [ "StringSLAM", "index.html", [
-    [ "Overview", "md_examples_2docs_2index.html", [
-      [ "Introduction", "md_examples_2docs_2index.html#autotoc_md1", [
-        [ "Why are there weird wrappers of OpenCV classes?", "md_examples_2docs_2index.html#autotoc_md2", null ]
-      ] ],
-      [ "Build", "md_examples_2docs_2index.html#autotoc_md3", null ],
-      [ "Quickstart", "md_examples_2docs_2index.html#autotoc_md4", null ]
-    ] ],
+    [ "Overview", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -59,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CMakeCCompilerId_8c.html",
-"structStringSLAM_1_1StereoCameraDistortion.html#ad9bb414cd32f73fac81bb77bf41397e6"
+"structStringSLAM_1_1StereoCameraDistortion.html#ab87b046f674e5714b48bcd0b64565c86"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

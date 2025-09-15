@@ -23,7 +23,9 @@ void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a1408db758feda
 const std\+::vector$<$ cv\+::\+DMatch $>$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a98c7f84b1baf4427f0bc3064f5d93a14}{match\+Frames}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f1, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f2)
 \begin{DoxyCompactList}\small\item\em Match descriptions from 2 frames. \end{DoxyCompactList}\item 
 const std\+::vector$<$ cv\+::\+DMatch $>$ \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_ab065fdfa75368ba4eb3b6818e0984294}{match\+Frames\+LK}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f1, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f2, cv\+::\+Size win\+Size=cv\+::\+Size(21, 21), int max\+Level=3)
-\begin{DoxyCompactList}\small\item\em Match descriptors from 2 frames using Lucas–\+Kanade (speedy) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Match descriptors from 2 frames using Lucas–\+Kanade (speedy) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Feature_1_1FeatureFinder_a6f1b68dfcc26057005957b86643c23d2}{draw\+Matches}} (\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&frame1, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&frame2, std\+::vector$<$ cv\+::\+DMatch $>$ matches, cv\+::\+Mat \&out)
+\begin{DoxyCompactList}\small\item\em Draw matches between 2 frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -91,6 +93,27 @@ Draw keypoints to frame.
 \begin{DoxyReturn}{Returns}
 Mat with keypoint 
 \end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_a6f1b68dfcc26057005957b86643c23d2}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!drawMatches@{drawMatches}}
+\index{drawMatches@{drawMatches}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
+\doxysubsubsection{\texorpdfstring{drawMatches()}{drawMatches()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Feature_1_1FeatureFinder_a6f1b68dfcc26057005957b86643c23d2} 
+void String\+SLAM\+::\+Feature\+::\+Feature\+Finder\+::draw\+Matches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{frame1}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{frame2}{, }\item[{std\+::vector$<$ cv\+::\+DMatch $>$}]{matches}{, }\item[{cv\+::\+Mat \&}]{out}{}\end{DoxyParamCaption})}
+
+
+
+Draw matches between 2 frames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame1} & \doxylink{structStringSLAM_1_1Frame}{Frame} 1 \\
+\hline
+{\em frame2} & \doxylink{structStringSLAM_1_1Frame}{Frame} 2 \\
+\hline
+{\em matches} & List of matches \\
+\hline
+{\em Mat} & out \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classStringSLAM_1_1Feature_1_1FeatureFinder_ad1d11bf45e717354de1a2900821a5d44}\index{StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}!getKeypoints@{getKeypoints}}
 \index{getKeypoints@{getKeypoints}!StringSLAM::Feature::FeatureFinder@{StringSLAM::Feature::FeatureFinder}}
 \doxysubsubsection{\texorpdfstring{getKeypoints()}{getKeypoints()}}

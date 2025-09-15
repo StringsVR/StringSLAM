@@ -1,7 +1,8 @@
 var index =
 [
-    [ "Introduction", "index.html#intro_sec", null ],
-    [ "Installation", "index.html#install_sec", null ],
-    [ "Quickstart", "index.html#usage_sec", null ],
-    [ "Examples", "index.html#examples_sec", null ]
+    [ "Introduction", "index.html#autotoc_md1", [
+      [ "Why are there weird wrappers of OpenCV classes?", "index.html#autotoc_md2", null ]
+    ] ],
+    [ "Build", "index.html#autotoc_md3", null ],
+    [ "Quickstart", "index.html#autotoc_md4", null ]
 ];

@@ -1,8 +1,127 @@
-\chapter{My Library Manual }
-\hypertarget{index}{}\label{index}\index{My Library Manual@{My Library Manual}}
-
+\chapter{Overview }
+\hypertarget{index}{}\label{index}\index{Overview@{Overview}}
+\label{index_md_examples_2docs_2index}%
+\Hypertarget{index_md_examples_2docs_2index}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_autotoc_md1}
+\doxylink{namespaceStringSLAM}{String\+SLAM} is a lightweight and efficient SLAM (Simultaneous Localization and Mapping) library designed for the lower end hardware. The 2 main design philosphicies for this library are
 \begin{DoxyItemize}
-\item Building
-\item Basics
-\item Examples 
+\item Low Power
+\item Customizable
 \end{DoxyItemize}
+
+It can provide fast feature tracking, frame matching, map generation for Robotics and AR/\+VR applications. ~\newline
+\doxylink{namespaceStringSLAM}{String\+SLAM} is easy to integrate and works with Open\+CV.\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Why are there weird wrappers of Open\+CV classes?}{Why are there weird wrappers of Open\+CV classes?}}\label{index_autotoc_md2}
+Ah yes. Well you see because calling Orb or a few other things while another library is using Open\+CV seems to freeze your application. I\textquotesingle{}m frankly not sure if I suck, or the parallelization for this is just fried. Who knows 🤷, anywho, thats why you see dumb wrappers for Open\+CV classes.\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Build}{Build}}\label{index_autotoc_md3}
+{\bfseries{Clone the repository and build with CMake\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/StringsVR/StringSLAM.git}
+\DoxyCodeLine{cd\ StringSLAM}
+\DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
+\DoxyCodeLine{cmake\ ..}
+
+\end{DoxyCode}
+
+
+{\bfseries{Generating documentation\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/target\ docs}
+
+\end{DoxyCode}
+
+
+{\bfseries{Dependencies\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/\ PkgConfig}
+\DoxyCodeLine{-\/\ OpenCV}
+\DoxyCodeLine{-\/\ Eigen}
+\DoxyCodeLine{-\/\ DOxygen\ (If\ you\ want\ documentation)}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Quickstart}{Quickstart}}\label{index_autotoc_md4}
+{\bfseries{Making a simple monocular matching system\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int\ main()\ \{}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ //\ 1.\ Configure\ the\ camera}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ CameraModel\ cm(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CameraIntrinsic(200,\ 200,\ 200,\ 200),\ \ \ \ \ \ \ //\ fx,\ fy,\ cx,\ cy}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CameraDistortion(15,\ 10,\ 12,\ 2,\ 5),\ \ \ \ \ \ \ //\ k1,\ k2,\ p1,\ p2,\ k3}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Size(640,\ 480)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ image\ size}
+\DoxyCodeLine{\ \ \ \ );}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ //\ 2.\ Create\ a\ MonoTracker\ for\ capturing\ frames}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ std::shared\_ptr<Tracker::MonoTracker>\ tracker\ =\ Tracker::MonoTracker::create(0,\ cm);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ //\ 3.\ Initialize\ ORB\ feature\ detector\ and\ FeatureFinder}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ std::shared\_ptr<OrbWrapper>\ orb\ =\ OrbWrapper::create(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 800,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ max\ number\ of\ features}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 1.2f,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ scale\ factor}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 4,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ number\ of\ levels}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 30,\ 0,\ 2,\ \ \ //\ edge\ threshold,\ first\ level,\ WTA\_K}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ORB::HARRIS\_SCORE,\ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ score\ type}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 32,\ 30\ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ patch\ size,\ fast\ threshold}
+\DoxyCodeLine{\ \ \ \ );}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ std::shared\_ptr<Feature::FeatureFinder>\ featureFinder\ =\ Feature::FeatureFinder::create(orb);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ //\ 4.\ Prepare\ frame\ storage}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ std::deque<Frame>\ frames;}
+\DoxyCodeLine{\ \ \ \ Frame\ tempFrame,\ prevFrame;}
+\DoxyCodeLine{\ \ \ \ Mat\ output;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ //\ 5.\ Main\ loop:\ read\ frames\ and\ track\ features}
+\DoxyCodeLine{\ \ \ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{\ \ \ \ for\ (;;)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Keep\ previous\ frame\ if\ available}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!frames.empty())\ prevFrame\ =\ frames.back();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Capture\ new\ frame\ from\ camera}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tracker-\/>read(tempFrame);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ output\ =\ tempFrame.frame;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Detect\ keypoints\ in\ current\ frame}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ featureFinder-\/>getKeypoints(tempFrame);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Match\ features\ with\ previous\ frame}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!prevFrame.kp.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ auto\ matches\ =\ featureFinder-\/>matchFramesLK(tempFrame,\ prevFrame);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ Draw\ matches\ on\ the\ output\ image}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (!matches.empty())\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ featureFinder-\/>drawMatch(tempFrame,\ prevFrame,\ matches,\ output);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Display\ the\ frame}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ imshow("{}Viewer"{},\ output);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ waitKey(tracker-\/>getFPS());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Only\ store\ frames\ that\ have\ keypoints}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!tempFrame.kp.empty())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ frames.push\_back(tempFrame);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Limit\ frame\ history\ to\ 45\ frames}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (frames.size()\ >\ 45)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ frames.pop\_front();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ return\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+See examples folder for more info 
