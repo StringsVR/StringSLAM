@@ -25,15 +25,23 @@
 \DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Map_a38315f9c02e56ed401876db9b098b240}{Map}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Map_a999f8359c19036bfbde922970026213e}{\string~Map}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00032\ }
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf}{addKeyframe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\&\ f);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710}{addLandmark}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{MapPoint}}\&\ mp);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ Frame>\&\ \mbox{\hyperlink{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22}{getKeyframes}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ keyframes;\ \}}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ MapPoint>\&\ \mbox{\hyperlink{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca}{getLandmarks}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ landmarks;\ \}}
-\DoxyCodeLine{00056\ \ \ \ \ \};}
-\DoxyCodeLine{00057\ \ \ \ \ }
-\DoxyCodeLine{00058\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf}{addKeyframe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\&\ f)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ keyframes[f.\mbox{\hyperlink{structStringSLAM_1_1Frame_a8a84430f3dd4bf1b183f6dc490b7385b}{id}}]\ =\ f;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710}{addLandmark}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{MapPoint}}\&\ mp)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ landmarks[landmarks.size()]\ =\ mp;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ Frame>\&\ \mbox{\hyperlink{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22}{getKeyframes}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ keyframes;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ MapPoint>\&\ \mbox{\hyperlink{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca}{getLandmarks}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ landmarks;\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Map>\ \mbox{\hyperlink{classStringSLAM_1_1Map_a083da3a81f178cebd843630586cee3b5}{create}}()\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<Map>();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \};}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM}}
 
 \end{DoxyCode}

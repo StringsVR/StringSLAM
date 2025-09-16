@@ -34,13 +34,17 @@ namespace StringSLAM
          * @brief Add keyframe to Map
          * @param f Linked frame
          */
-        void addKeyframe(const Frame& f);
+        inline void addKeyframe(const Frame& f) {
+            keyframes[f.id] = f;
+        }
 
         /**
          * @brief Add landmark to Map
          * @param mp Observed point
          */
-        void addLandmark(const MapPoint& mp);
+        inline void addLandmark(const MapPoint& mp) {
+            landmarks[landmarks.size()] = mp;
+        }
 
         /**
          * @brief Get all keyframes.
@@ -53,6 +57,14 @@ namespace StringSLAM
          * @return Landmarks
          */
         const std::map<int, MapPoint>& getLandmarks() const { return landmarks; }
+
+        /**
+         * @brief Create Shared Pointer of Map object
+         * @return Shared Pointer of Map
+         */
+        static std::shared_ptr<Map> create() {
+            return std::make_shared<Map>();
+        }
     };
     
 } // namespace StringSLAM

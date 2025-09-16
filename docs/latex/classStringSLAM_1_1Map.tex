@@ -24,6 +24,11 @@ const std\+::map$<$ int, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} $>$
 \begin{DoxyCompactList}\small\item\em Get all keyframes. \end{DoxyCompactList}\item 
 const std\+::map$<$ int, \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} $>$ \& \mbox{\hyperlink{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca}{get\+Landmarks}} () const
 \begin{DoxyCompactList}\small\item\em Get all landmarks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Map}{Map}} $>$ \mbox{\hyperlink{classStringSLAM_1_1Map_a083da3a81f178cebd843630586cee3b5}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create Shared Pointer of \doxylink{classStringSLAM_1_1Map}{Map} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -57,7 +62,7 @@ String\+SLAM\+::\+Map\+::\texorpdfstring{$\sim$}{\string~}\+Map (\begin{DoxyPara
 \index{addKeyframe@{addKeyframe}!StringSLAM::Map@{StringSLAM::Map}}
 \doxysubsubsection{\texorpdfstring{addKeyframe()}{addKeyframe()}}
 {\footnotesize\ttfamily \label{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf} 
-void String\+SLAM\+::\+Map\+::add\+Keyframe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{}\end{DoxyParamCaption})}
+void String\+SLAM\+::\+Map\+::add\+Keyframe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -72,7 +77,7 @@ Add keyframe to \doxylink{classStringSLAM_1_1Map}{Map}.
 \index{addLandmark@{addLandmark}!StringSLAM::Map@{StringSLAM::Map}}
 \doxysubsubsection{\texorpdfstring{addLandmark()}{addLandmark()}}
 {\footnotesize\ttfamily \label{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710} 
-void String\+SLAM\+::\+Map\+::add\+Landmark (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} \&}]{mp}{}\end{DoxyParamCaption})}
+void String\+SLAM\+::\+Map\+::add\+Landmark (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} \&}]{mp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -83,6 +88,19 @@ Add landmark to \doxylink{classStringSLAM_1_1Map}{Map}.
 {\em mp} & Observed point \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Map_a083da3a81f178cebd843630586cee3b5}\index{StringSLAM::Map@{StringSLAM::Map}!create@{create}}
+\index{create@{create}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_a083da3a81f178cebd843630586cee3b5} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Map}{Map}} $>$ String\+SLAM\+::\+Map\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create Shared Pointer of \doxylink{classStringSLAM_1_1Map}{Map} object. 
+
+\begin{DoxyReturn}{Returns}
+Shared Pointer of \doxylink{classStringSLAM_1_1Map}{Map} 
+\end{DoxyReturn}
 \Hypertarget{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22}\index{StringSLAM::Map@{StringSLAM::Map}!getKeyframes@{getKeyframes}}
 \index{getKeyframes@{getKeyframes}!StringSLAM::Map@{StringSLAM::Map}}
 \doxysubsubsection{\texorpdfstring{getKeyframes()}{getKeyframes()}}
