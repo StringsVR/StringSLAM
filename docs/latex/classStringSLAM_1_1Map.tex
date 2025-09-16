@@ -1,0 +1,116 @@
+\doxysection{String\+SLAM\+::Map Class Reference}
+\hypertarget{classStringSLAM_1_1Map}{}\label{classStringSLAM_1_1Map}\index{StringSLAM::Map@{StringSLAM::Map}}
+
+
+A class meant to manage landmarks and keyframes.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Map_a38315f9c02e56ed401876db9b098b240}{Map}} ()=default
+\begin{DoxyCompactList}\small\item\em Create Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStringSLAM_1_1Map_a999f8359c19036bfbde922970026213e}{\texorpdfstring{$\sim$}{\string~}\+Map}} ()=default
+\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf}{add\+Keyframe}} (const \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&f)
+\begin{DoxyCompactList}\small\item\em Add keyframe to \doxylink{classStringSLAM_1_1Map}{Map}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710}{add\+Landmark}} (const \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} \&mp)
+\begin{DoxyCompactList}\small\item\em Add landmark to \doxylink{classStringSLAM_1_1Map}{Map}. \end{DoxyCompactList}\item 
+const std\+::map$<$ int, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} $>$ \& \mbox{\hyperlink{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22}{get\+Keyframes}} () const
+\begin{DoxyCompactList}\small\item\em Get all keyframes. \end{DoxyCompactList}\item 
+const std\+::map$<$ int, \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} $>$ \& \mbox{\hyperlink{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca}{get\+Landmarks}} () const
+\begin{DoxyCompactList}\small\item\em Get all landmarks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class meant to manage landmarks and keyframes. 
+
+\label{doc-constructors}
+\Hypertarget{classStringSLAM_1_1Map_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStringSLAM_1_1Map_a38315f9c02e56ed401876db9b098b240}\index{StringSLAM::Map@{StringSLAM::Map}!Map@{Map}}
+\index{Map@{Map}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_a38315f9c02e56ed401876db9b098b240} 
+String\+SLAM\+::\+Map\+::\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Create Constructor. 
+
+\Hypertarget{classStringSLAM_1_1Map_a999f8359c19036bfbde922970026213e}\index{StringSLAM::Map@{StringSLAM::Map}!````~Map@{\texorpdfstring{$\sim$}{\string~}Map}}
+\index{````~Map@{\texorpdfstring{$\sim$}{\string~}Map}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Map()}{\string~Map()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_a999f8359c19036bfbde922970026213e} 
+String\+SLAM\+::\+Map\+::\texorpdfstring{$\sim$}{\string~}\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classStringSLAM_1_1Map_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf}\index{StringSLAM::Map@{StringSLAM::Map}!addKeyframe@{addKeyframe}}
+\index{addKeyframe@{addKeyframe}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{addKeyframe()}{addKeyframe()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf} 
+void String\+SLAM\+::\+Map\+::add\+Keyframe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} \&}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Add keyframe to \doxylink{classStringSLAM_1_1Map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Linked frame \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710}\index{StringSLAM::Map@{StringSLAM::Map}!addLandmark@{addLandmark}}
+\index{addLandmark@{addLandmark}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{addLandmark()}{addLandmark()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710} 
+void String\+SLAM\+::\+Map\+::add\+Landmark (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} \&}]{mp}{}\end{DoxyParamCaption})}
+
+
+
+Add landmark to \doxylink{classStringSLAM_1_1Map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mp} & Observed point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22}\index{StringSLAM::Map@{StringSLAM::Map}!getKeyframes@{getKeyframes}}
+\index{getKeyframes@{getKeyframes}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{getKeyframes()}{getKeyframes()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22} 
+const std\+::map$<$ int, \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}} $>$ \& String\+SLAM\+::\+Map\+::get\+Keyframes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all keyframes. 
+
+\begin{DoxyReturn}{Returns}
+Keyframes 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca}\index{StringSLAM::Map@{StringSLAM::Map}!getLandmarks@{getLandmarks}}
+\index{getLandmarks@{getLandmarks}!StringSLAM::Map@{StringSLAM::Map}}
+\doxysubsubsection{\texorpdfstring{getLandmarks()}{getLandmarks()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca} 
+const std\+::map$<$ int, \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{Map\+Point}} $>$ \& String\+SLAM\+::\+Map\+::get\+Landmarks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all landmarks. 
+
+\begin{DoxyReturn}{Returns}
+Landmarks 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/core/\mbox{\hyperlink{Map_8hpp}{Map.\+hpp}}\end{DoxyCompactItemize}

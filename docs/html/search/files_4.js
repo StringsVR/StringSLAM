@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['stereotracker_2ecpp_0',['StereoTracker.cpp',['../StereoTracker_8cpp.html',1,'']]],
-  ['stereotracker_2ehpp_1',['StereoTracker.hpp',['../StereoTracker_8hpp.html',1,'']]]
+  ['optimizer_2ehpp_0',['Optimizer.hpp',['../Optimizer_8hpp.html',1,'']]]
 ];

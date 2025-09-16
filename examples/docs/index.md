@@ -138,6 +138,3 @@ int main() {
 ```
 
 See examples folder for more info
-
-git add .
-git commit -m "

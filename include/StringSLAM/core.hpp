@@ -526,4 +526,5 @@ namespace StringSLAM
             return std::make_shared<Accelerator>();
         };
     };
+
 } // namespace StringSLAM

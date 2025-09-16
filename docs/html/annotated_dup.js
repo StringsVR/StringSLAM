@@ -13,6 +13,8 @@ var annotated_dup =
       [ "CameraIntrinsic", "structStringSLAM_1_1CameraIntrinsic.html", "structStringSLAM_1_1CameraIntrinsic" ],
       [ "CameraModel", "structStringSLAM_1_1CameraModel.html", "structStringSLAM_1_1CameraModel" ],
       [ "Frame", "structStringSLAM_1_1Frame.html", "structStringSLAM_1_1Frame" ],
+      [ "Map", "classStringSLAM_1_1Map.html", "classStringSLAM_1_1Map" ],
+      [ "MapPoint", "structStringSLAM_1_1MapPoint.html", "structStringSLAM_1_1MapPoint" ],
       [ "OrbWrapper", "classStringSLAM_1_1OrbWrapper.html", "classStringSLAM_1_1OrbWrapper" ],
       [ "StereoCameraDistortion", "structStringSLAM_1_1StereoCameraDistortion.html", "structStringSLAM_1_1StereoCameraDistortion" ],
       [ "StereoFrame", "structStringSLAM_1_1StereoFrame.html", "structStringSLAM_1_1StereoFrame" ],

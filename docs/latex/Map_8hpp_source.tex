@@ -1,0 +1,39 @@
+\doxysection{Map.\+hpp}
+\hypertarget{Map_8hpp_source}{}\label{Map_8hpp_source}\index{include/StringSLAM/core/Map.hpp@{include/StringSLAM/core/Map.hpp}}
+\mbox{\hyperlink{Map_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{core_8hpp}{StringSLAM/core.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}opencv2/core/types.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceStringSLAM}{StringSLAM}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structStringSLAM_1_1MapPoint}{MapPoint}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ cv::Point3f\ \mbox{\hyperlink{structStringSLAM_1_1MapPoint_aa9d98dae85e5172e4f1925d67bbfd125}{pos}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{structStringSLAM_1_1MapPoint_a2f08814422b5d745f799b72582e238d8}{observations}};}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Map_a38315f9c02e56ed401876db9b098b240}{Map}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::map<int,\ Frame>\ keyframes;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::map<int,\ MapPoint>\ landmarks;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Map_a38315f9c02e56ed401876db9b098b240}{Map}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Map_a999f8359c19036bfbde922970026213e}{\string~Map}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Map_ad2026e3d72a1b7c9b9288d26b45f9ecf}{addKeyframe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1Frame}{Frame}}\&\ f);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStringSLAM_1_1Map_a03475bb7f4e239e566ee9e93a0980710}{addLandmark}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1MapPoint}{MapPoint}}\&\ mp);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ Frame>\&\ \mbox{\hyperlink{classStringSLAM_1_1Map_aec8c2abed5c5919dfb2a86ccc0d46d22}{getKeyframes}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ keyframes;\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ MapPoint>\&\ \mbox{\hyperlink{classStringSLAM_1_1Map_a399c0953adbec2b7c41af65d01b650ca}{getLandmarks}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ landmarks;\ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM}}
+
+\end{DoxyCode}
