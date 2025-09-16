@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['stereocameradistortion_0',['StereoCameraDistortion',['../structStringSLAM_1_1StereoCameraDistortion.html',1,'StringSLAM']]],
-  ['stereoframe_1',['StereoFrame',['../structStringSLAM_1_1StereoFrame.html',1,'StringSLAM']]],
-  ['stereosgbmwrapper_2',['StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html',1,'StringSLAM']]],
-  ['stereotracker_3',['StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html',1,'StringSLAM::Tracker']]]
+  ['pose2d_0',['Pose2D',['../structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D.html',1,'StringSLAM::Estimation::Poser']]],
+  ['poseestimator2d_1',['PoseEstimator2d',['../classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d.html',1,'StringSLAM::Estimation::Poser']]]
 ];

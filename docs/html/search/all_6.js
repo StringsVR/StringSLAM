@@ -11,5 +11,6 @@ var searchData=
   ['getkeypoints_8',['getKeypoints',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html#ad1d11bf45e717354de1a2900821a5d44',1,'StringSLAM::Feature::FeatureFinder']]],
   ['getlandmarks_9',['getLandmarks',['../classStringSLAM_1_1Map.html#a399c0953adbec2b7c41af65d01b650ca',1,'StringSLAM::Map']]],
   ['getmaxfeatures_10',['getMaxFeatures',['../classStringSLAM_1_1OrbWrapper.html#a1757ea442ac356ad7209a50416b5d3a1',1,'StringSLAM::OrbWrapper']]],
-  ['gettrfrompose_11',['getTRFromPose',['../structStringSLAM_1_1Frame.html#a5d53455d499ff9f9adbf2431a2d4b7ca',1,'StringSLAM::Frame::getTRFromPose()'],['../structStringSLAM_1_1StereoFrame.html#a12a94b43f2bdde34b850c5990dce0bdf',1,'StringSLAM::StereoFrame::getTRFromPose()']]]
+  ['gettheta_11',['getTheta',['../structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D.html#aa8dbd8d1eb87efaa5cd6c39d244109ac',1,'StringSLAM::Estimation::Poser::Pose2D']]],
+  ['gettrfrompose_12',['getTRFromPose',['../structStringSLAM_1_1Frame.html#a5d53455d499ff9f9adbf2431a2d4b7ca',1,'StringSLAM::Frame::getTRFromPose()'],['../structStringSLAM_1_1StereoFrame.html#a12a94b43f2bdde34b850c5990dce0bdf',1,'StringSLAM::StereoFrame::getTRFromPose()']]]
 ];

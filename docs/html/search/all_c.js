@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['p1_0',['P1',['../structStringSLAM_1_1StereoCameraDistortion.html#ab74d0db611194e21e8c34baa05100f67',1,'StringSLAM::StereoCameraDistortion']]],
-  ['p1_1',['p1',['../structStringSLAM_1_1CameraDistortion.html#aff50f0b660acbff2327e2b9dc178a196',1,'StringSLAM::CameraDistortion']]],
-  ['p2_2',['P2',['../structStringSLAM_1_1StereoCameraDistortion.html#a49a88b0b6a0b15c9a5e7ac1bca553689',1,'StringSLAM::StereoCameraDistortion']]],
-  ['p2_3',['p2',['../structStringSLAM_1_1CameraDistortion.html#a641399957d1388ce9ec493bcb7295d4a',1,'StringSLAM::CameraDistortion']]],
-  ['platform_5fid_4',['PLATFORM_ID',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp']]],
-  ['pos_5',['pos',['../structStringSLAM_1_1MapPoint.html#aa9d98dae85e5172e4f1925d67bbfd125',1,'StringSLAM::MapPoint']]],
-  ['pose_6',['pose',['../structStringSLAM_1_1Frame.html#af8de001a64b92ce98578d0e909231a22',1,'StringSLAM::Frame::pose'],['../structStringSLAM_1_1StereoFrame.html#a96cdce248aeb8b9f3e941ad1a14571e5',1,'StringSLAM::StereoFrame::pose']]],
-  ['poseestimator_2ehpp_7',['PoseEstimator.hpp',['../PoseEstimator_8hpp.html',1,'']]]
+  ['observations_0',['observations',['../structStringSLAM_1_1MapPoint.html#a2f08814422b5d745f799b72582e238d8',1,'StringSLAM::MapPoint']]],
+  ['of_20opencv_20classes_1',['Why are there weird wrappers of OpenCV classes?',['../index.html#autotoc_md2',1,'']]],
+  ['open_2',['open',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#ab21ec65ccf3eb8baa39772cf49cfc6a6',1,'StringSLAM::Tracker::MonoTracker::open()'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#afad8c1da95dc55f4d5133a180e8499ab',1,'StringSLAM::Tracker::StereoTracker::open()']]],
+  ['opencv_20classes_3',['Why are there weird wrappers of OpenCV classes?',['../index.html#autotoc_md2',1,'']]],
+  ['optimizer_2ehpp_4',['Optimizer.hpp',['../Optimizer_8hpp.html',1,'']]],
+  ['orbwrapper_5',['OrbWrapper',['../classStringSLAM_1_1OrbWrapper.html',1,'StringSLAM::OrbWrapper'],['../classStringSLAM_1_1OrbWrapper.html#aa6476683071324676d0098dae4c0fdc9',1,'StringSLAM::OrbWrapper::OrbWrapper()']]],
+  ['overview_6',['Overview',['../index.html',1,'']]]
 ];

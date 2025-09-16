@@ -1,5 +1,6 @@
 var namespaceStringSLAM =
 [
+    [ "Estimation", "namespaceStringSLAM_1_1Estimation.html", "namespaceStringSLAM_1_1Estimation" ],
     [ "Feature", "namespaceStringSLAM_1_1Feature.html", "namespaceStringSLAM_1_1Feature" ],
     [ "Tracker", "namespaceStringSLAM_1_1Tracker.html", "namespaceStringSLAM_1_1Tracker" ],
     [ "Accelerator", "classStringSLAM_1_1Accelerator.html", "classStringSLAM_1_1Accelerator" ],

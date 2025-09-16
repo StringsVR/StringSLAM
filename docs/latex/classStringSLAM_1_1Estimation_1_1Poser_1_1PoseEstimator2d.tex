@@ -1,0 +1,138 @@
+\doxysection{String\+SLAM\+::Estimation\+::Poser\+::Pose\+Estimator2d Class Reference}
+\hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}{}\label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+
+
+A class for estimating pose from 2 \doxylink{structStringSLAM_1_1Frame}{Frame} \textquotesingle{}s.  
+
+
+
+
+{\ttfamily \#include $<$Pose\+Estimator2d.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_aef98bb9001c7bb612ac8839210609547}{Pose\+Estimator2d}} ()=default
+\item 
+\mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a21e6b2be344fe91194731df3639c1bfd}{\texorpdfstring{$\sim$}{\string~}\+Pose\+Estimator2d}} ()=default
+\item 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_abf37584ed47b32f1b83e1ff3ce74d19e}{transform}} (const \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}} \&pose, const Eigen\+::\+Vector2d \&p, double c, double s)
+\begin{DoxyCompactList}\small\item\em Transform a point p (2x1) by a matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acf611fb15b1ad10ea8f1d6e70681e16d}{residual}} (const \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}} \&pose, const Eigen\+::\+Vector2d \&p, const Eigen\+::\+Vector2d \&q, double c, double s)
+\begin{DoxyCompactList}\small\item\em Compute the residual. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 2, 3 $>$ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a1078b62cb5a0327fe48a0bf896711946}{jacobian\+\_\+pose}} (double c, double s, const Eigen\+::\+Vector2d \&p)
+\begin{DoxyCompactList}\small\item\em Calculate Jacobian from pose. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a20765ddf64ecc9177d0109852ace9f3e}{solve\+Pose2\+D\+\_\+\+GN}} (const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&pts\+\_\+p, const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&pts\+\_\+q, \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}} \&pose, int max\+\_\+iters=50, double tol=1e-\/6, bool use\+LM=true, double init\+\_\+damping=1e-\/3)
+\begin{DoxyCompactList}\small\item\em Gauss-\/\+Newton (with optional LM damping). Points must be corresponded\+: pts\+\_\+p\mbox{[}i\mbox{]} (in source frame) -\/\texorpdfstring{$>$}{>} pts\+\_\+q\mbox{[}i\mbox{]} (in target/world frame) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}{Pose\+Estimator2d}} $>$ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acc2cc9ef998a3bb41254554a027cafa8}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create Shared Pointer of \doxylink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}{Pose\+Estimator2d} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for estimating pose from 2 \doxylink{structStringSLAM_1_1Frame}{Frame} \textquotesingle{}s. 
+
+A class for estimating the current pose from non-\/depth source. 
+
+\label{doc-constructors}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_aef98bb9001c7bb612ac8839210609547}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!PoseEstimator2d@{PoseEstimator2d}}
+\index{PoseEstimator2d@{PoseEstimator2d}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{PoseEstimator2d()}{PoseEstimator2d()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_aef98bb9001c7bb612ac8839210609547} 
+String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::\+Pose\+Estimator2d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a21e6b2be344fe91194731df3639c1bfd}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!````~PoseEstimator2d@{\texorpdfstring{$\sim$}{\string~}PoseEstimator2d}}
+\index{````~PoseEstimator2d@{\texorpdfstring{$\sim$}{\string~}PoseEstimator2d}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PoseEstimator2d()}{\string~PoseEstimator2d()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a21e6b2be344fe91194731df3639c1bfd} 
+String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::\texorpdfstring{$\sim$}{\string~}\+Pose\+Estimator2d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acc2cc9ef998a3bb41254554a027cafa8}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!create@{create}}
+\index{create@{create}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acc2cc9ef998a3bb41254554a027cafa8} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}{Pose\+Estimator2d}} $>$ String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create Shared Pointer of \doxylink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}{Pose\+Estimator2d} object. 
+
+\begin{DoxyReturn}{Returns}
+Shared Pointer of \doxylink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d}{Pose\+Estimator2d} 
+\end{DoxyReturn}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a1078b62cb5a0327fe48a0bf896711946}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!jacobian\_pose@{jacobian\_pose}}
+\index{jacobian\_pose@{jacobian\_pose}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{jacobian\_pose()}{jacobian\_pose()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a1078b62cb5a0327fe48a0bf896711946} 
+Eigen\+::\+Matrix$<$ double, 2, 3 $>$ String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::jacobian\+\_\+pose (\begin{DoxyParamCaption}\item[{double}]{c}{, }\item[{double}]{s}{, }\item[{const Eigen\+::\+Vector2d \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Calculate Jacobian from pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & Pose \\
+\hline
+{\em p} & Point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acf611fb15b1ad10ea8f1d6e70681e16d}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!residual@{residual}}
+\index{residual@{residual}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{residual()}{residual()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acf611fb15b1ad10ea8f1d6e70681e16d} 
+Eigen\+::\+Vector2d String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::residual (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}} \&}]{pose}{, }\item[{const Eigen\+::\+Vector2d \&}]{p}{, }\item[{const Eigen\+::\+Vector2d \&}]{q}{, }\item[{double}]{c}{, }\item[{double}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Compute the residual. 
+
+r = R(theta) \texorpdfstring{$\ast$}{*} p + t -\/ q 
+\begin{DoxyParams}{Parameters}
+{\em pose} & Pose \\
+\hline
+{\em p} & Point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a20765ddf64ecc9177d0109852ace9f3e}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!solvePose2D\_GN@{solvePose2D\_GN}}
+\index{solvePose2D\_GN@{solvePose2D\_GN}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{solvePose2D\_GN()}{solvePose2D\_GN()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a20765ddf64ecc9177d0109852ace9f3e} 
+bool String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::solve\+Pose2\+D\+\_\+\+GN (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{pts\+\_\+p}{, }\item[{const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{pts\+\_\+q}{, }\item[{\mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}} \&}]{pose}{, }\item[{int}]{max\+\_\+iters}{ = {\ttfamily 50}, }\item[{double}]{tol}{ = {\ttfamily 1e-\/6}, }\item[{bool}]{use\+LM}{ = {\ttfamily true}, }\item[{double}]{init\+\_\+damping}{ = {\ttfamily 1e-\/3}}\end{DoxyParamCaption})}
+
+
+
+Gauss-\/\+Newton (with optional LM damping). Points must be corresponded\+: pts\+\_\+p\mbox{[}i\mbox{]} (in source frame) -\/\texorpdfstring{$>$}{>} pts\+\_\+q\mbox{[}i\mbox{]} (in target/world frame) 
+
+\Hypertarget{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_abf37584ed47b32f1b83e1ff3ce74d19e}\index{StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}!transform@{transform}}
+\index{transform@{transform}!StringSLAM::Estimation::Poser::PoseEstimator2d@{StringSLAM::Estimation::Poser::PoseEstimator2d}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \label{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_abf37584ed47b32f1b83e1ff3ce74d19e} 
+Eigen\+::\+Vector2d String\+SLAM\+::\+Estimation\+::\+Poser\+::\+Pose\+Estimator2d\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}} \&}]{pose}{, }\item[{const Eigen\+::\+Vector2d \&}]{p}{, }\item[{double}]{c}{, }\item[{double}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Transform a point p (2x1) by a matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & Pose \\
+\hline
+{\em p} & Point \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+String\+SLAM/\+Estimation/\+Poser/\mbox{\hyperlink{PoseEstimator2d_8hpp}{Pose\+Estimator2d.\+hpp}}\item 
+src/\+Estimation/\+Poser/\mbox{\hyperlink{PoseEstimator2d_8cpp}{Pose\+Estimator2d.\+cpp}}\end{DoxyCompactItemize}

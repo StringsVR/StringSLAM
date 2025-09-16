@@ -1,0 +1,53 @@
+\doxysection{Pose\+Estimator2d.\+hpp}
+\hypertarget{PoseEstimator2d_8hpp_source}{}\label{PoseEstimator2d_8hpp_source}\index{include/StringSLAM/Estimation/Poser/PoseEstimator2d.hpp@{include/StringSLAM/Estimation/Poser/PoseEstimator2d.hpp}}
+\mbox{\hyperlink{PoseEstimator2d_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}opencv2/core/types.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <eigen3/Eigen/Eigen>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <eigen3/Eigen/src/Core/Matrix.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceStringSLAM_1_1Estimation_1_1Poser}{StringSLAM::Estimation::Poser}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ Eigen::Vector3f\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_afdec49c6f8ae4cb2b1cbf1af1caf192a}{pos}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_aa8dbd8d1eb87efaa5cd6c39d244109ac}{getTheta}}()\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_afdec49c6f8ae4cb2b1cbf1af1caf192a}{pos}}.z();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Eigen::Matrix3d\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_a310d883ebd0118f3cbdc4667d1c69c79}{matrix}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ Eigen::Matrix3d\ T\ =\ Eigen::Matrix3d::Identity();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ c\ =\ cos(\mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_afdec49c6f8ae4cb2b1cbf1af1caf192a}{pos}}.z());}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ s\ =\ sin(\mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_afdec49c6f8ae4cb2b1cbf1af1caf192a}{pos}}.z());}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ T(0,0)\ =\ c;\ T(0,1)\ =\ -\/s;\ T(0,2)\ =\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_afdec49c6f8ae4cb2b1cbf1af1caf192a}{pos}}.x();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ T(1,0)\ =\ s;\ T(1,1)\ =\ \ c;\ T(1,2)\ =\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D_afdec49c6f8ae4cb2b1cbf1af1caf192a}{pos}}.y();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ T;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_aef98bb9001c7bb612ac8839210609547}{PoseEstimator2d}}}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_aef98bb9001c7bb612ac8839210609547}{PoseEstimator2d}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a21e6b2be344fe91194731df3639c1bfd}{\string~PoseEstimator2d}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ Eigen::Vector2d\ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_abf37584ed47b32f1b83e1ff3ce74d19e}{transform}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}}\ \&pose,\ \textcolor{keyword}{const}\ Eigen::Vector2d\ \&p,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}\ s);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ Eigen::Vector2d\ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acf611fb15b1ad10ea8f1d6e70681e16d}{residual}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}}\ \&pose,\ \textcolor{keyword}{const}\ Eigen::Vector2d\ \&p,\ \textcolor{keyword}{const}\ Eigen::Vector2d\ \&q,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}\ s);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ Eigen::Matrix<double,2,3>\ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a1078b62cb5a0327fe48a0bf896711946}{jacobian\_pose}}(\textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}\ s,\ \textcolor{keyword}{const}\ Eigen::Vector2d\ \&p);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_a20765ddf64ecc9177d0109852ace9f3e}{solvePose2D\_GN}}(\textcolor{keyword}{const}\ std::vector<Eigen::Vector2d>\ \&pts\_p,\ \textcolor{keyword}{const}\ std::vector<Eigen::Vector2d>\ \&pts\_q,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D}{Pose2D}}\ \&pose,\ \textcolor{keywordtype}{int}\ max\_iters\ =\ 50,\ \textcolor{keywordtype}{double}\ tol\ =\ 1e-\/6,\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ useLM\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{double}\ init\_damping\ =\ 1e-\/3}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<PoseEstimator2d>\ \mbox{\hyperlink{classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d_acc2cc9ef998a3bb41254554a027cafa8}{create}}()\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<PoseEstimator2d>();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \};\ \ \ }
+\DoxyCodeLine{00087\ \}\ \textcolor{comment}{//\ namespace\ StringSLAM::Estimation::Poser}}
+
+\end{DoxyCode}

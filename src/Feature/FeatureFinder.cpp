@@ -107,8 +107,6 @@ namespace StringSLAM::Feature
         }),
     matches.end()
     );
-
-
         cv::drawMatches(frame1.frame, frame1.kp, frame2.frame, frame2.kp, matches, out);
     }
 

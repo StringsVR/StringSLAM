@@ -1,17 +1,11 @@
 var searchData=
 [
-  ['setposefromtr_0',['setPoseFromTR',['../structStringSLAM_1_1Frame.html#a641aae6ee77ccdac4255e8eb6c4a34e6',1,'StringSLAM::Frame::setPoseFromTR()'],['../structStringSLAM_1_1StereoFrame.html#a5104aeca9566ef0fcf7a284adef83a7b',1,'StringSLAM::StereoFrame::setPoseFromTR()']]],
-  ['settimestamp_1',['setTimestamp',['../structStringSLAM_1_1Frame.html#a67e515632487d1909e416629fb963cda',1,'StringSLAM::Frame::setTimestamp()'],['../structStringSLAM_1_1StereoFrame.html#a2433de2e4ec6aa4b30fb2facd0858917',1,'StringSLAM::StereoFrame::setTimestamp()']]],
-  ['stereocameradistortion_2',['StereoCameraDistortion',['../structStringSLAM_1_1StereoCameraDistortion.html',1,'StringSLAM::StereoCameraDistortion'],['../structStringSLAM_1_1StereoCameraDistortion.html#a5fec958abdbe1a67168d8212f8c9caf2',1,'StringSLAM::StereoCameraDistortion::StereoCameraDistortion(cv::Mat R_, cv::Mat T_)'],['../structStringSLAM_1_1StereoCameraDistortion.html#adadc071c7a39208583944de1420da433',1,'StringSLAM::StereoCameraDistortion::StereoCameraDistortion()=default']]],
-  ['stereoframe_3',['StereoFrame',['../structStringSLAM_1_1StereoFrame.html',1,'StringSLAM']]],
-  ['stereosgbmwrapper_4',['StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html',1,'StringSLAM::StereoSGBMWrapper'],['../classStringSLAM_1_1StereoSGBMWrapper.html#a5c2ced679e3804de4adc97637e5e0610',1,'StringSLAM::StereoSGBMWrapper::StereoSGBMWrapper()']]],
-  ['stereotracker_5',['StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html',1,'StringSLAM::Tracker::StereoTracker'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a283e7c626db5d2c10f723e1ace3608aa',1,'StringSLAM::Tracker::StereoTracker::StereoTracker()']]],
-  ['stereotracker_2ecpp_6',['StereoTracker.cpp',['../StereoTracker_8cpp.html',1,'']]],
-  ['stereotracker_2ehpp_7',['StereoTracker.hpp',['../StereoTracker_8hpp.html',1,'']]],
-  ['stringify_8',['STRINGIFY',['../CMakeCCompilerId_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCXXCompilerId.cpp']]],
-  ['stringify_5fhelper_9',['STRINGIFY_HELPER',['../CMakeCCompilerId_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCXXCompilerId.cpp']]],
-  ['stringslam_10',['StringSLAM',['../namespaceStringSLAM.html',1,'']]],
-  ['stringslam_3a_3afeature_11',['Feature',['../namespaceStringSLAM_1_1Feature.html',1,'StringSLAM']]],
-  ['stringslam_3a_3atracker_12',['Tracker',['../namespaceStringSLAM_1_1Tracker.html',1,'StringSLAM']]],
-  ['system_2ehpp_13',['System.hpp',['../System_8hpp.html',1,'']]]
+  ['r_0',['R',['../structStringSLAM_1_1CameraDistortion.html#abd5ddbbee9f7d8e54aee855f70ffa24e',1,'StringSLAM::CameraDistortion::R'],['../structStringSLAM_1_1StereoCameraDistortion.html#a77c26a6160859d2c60125b0f63dbfe10',1,'StringSLAM::StereoCameraDistortion::R']]],
+  ['r1_1',['R1',['../structStringSLAM_1_1StereoCameraDistortion.html#ab87b046f674e5714b48bcd0b64565c86',1,'StringSLAM::StereoCameraDistortion']]],
+  ['r2_2',['R2',['../structStringSLAM_1_1StereoCameraDistortion.html#af99f11a61d78057a9b47e3b7a92399cd',1,'StringSLAM::StereoCameraDistortion']]],
+  ['read_3',['read',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a4dcb050dcce2a98d2398a7eddc576794',1,'StringSLAM::Tracker::MonoTracker::read()'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a72d25299479bcf0e0e581c7b7ad5c112',1,'StringSLAM::Tracker::StereoTracker::read(StereoFrame &amp;sf)']]],
+  ['readdepth_4',['readDepth',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a286b0025e7f58da8b79ed94948965857',1,'StringSLAM::Tracker::StereoTracker']]],
+  ['readundistorted_5',['readUndistorted',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a2899a3f094c85bce5f188941c8b8a5ce',1,'StringSLAM::Tracker::MonoTracker']]],
+  ['release_6',['release',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a4970eefb4acb4f3d5e5576699bfa65c1',1,'StringSLAM::Tracker::MonoTracker::release()'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#ada9cfd286b358dd0ae6449d9d98619f8',1,'StringSLAM::Tracker::StereoTracker::release()']]],
+  ['residual_7',['residual',['../classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d.html#acf611fb15b1ad10ea8f1d6e70681e16d',1,'StringSLAM::Estimation::Poser::PoseEstimator2d']]]
 ];

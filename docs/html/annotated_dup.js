@@ -1,6 +1,12 @@
 var annotated_dup =
 [
     [ "StringSLAM", "namespaceStringSLAM.html", [
+      [ "Estimation", "namespaceStringSLAM_1_1Estimation.html", [
+        [ "Poser", "namespaceStringSLAM_1_1Estimation_1_1Poser.html", [
+          [ "Pose2D", "structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D.html", "structStringSLAM_1_1Estimation_1_1Poser_1_1Pose2D" ],
+          [ "PoseEstimator2d", "classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d.html", "classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d" ]
+        ] ]
+      ] ],
       [ "Feature", "namespaceStringSLAM_1_1Feature.html", [
         [ "FeatureFinder", "classStringSLAM_1_1Feature_1_1FeatureFinder.html", "classStringSLAM_1_1Feature_1_1FeatureFinder" ]
       ] ],

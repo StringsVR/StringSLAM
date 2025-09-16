@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['_7eaccelerator_0',['~Accelerator',['../classStringSLAM_1_1Accelerator.html#af66d077f7085156c50548106721bdd2c',1,'StringSLAM::Accelerator']]],
-  ['_7efeaturefinder_1',['~FeatureFinder',['../classStringSLAM_1_1Feature_1_1FeatureFinder.html#af01b310dc757ad7009f824a79adb2716',1,'StringSLAM::Feature::FeatureFinder']]],
-  ['_7emap_2',['~Map',['../classStringSLAM_1_1Map.html#a999f8359c19036bfbde922970026213e',1,'StringSLAM::Map']]],
-  ['_7emonotracker_3',['~MonoTracker',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a416b4fba2beceb81fd85c10e9d14b546',1,'StringSLAM::Tracker::MonoTracker']]],
-  ['_7eorbwrapper_4',['~OrbWrapper',['../classStringSLAM_1_1OrbWrapper.html#adf993a29521c894cb8bb455e6a16d904',1,'StringSLAM::OrbWrapper']]],
-  ['_7estereosgbmwrapper_5',['~StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html#a3c0741d61f17c6e3d7d43d41fe9bf701',1,'StringSLAM::StereoSGBMWrapper']]],
-  ['_7estereotracker_6',['~StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a20ad0c06310ed66f415de9d5a242197d',1,'StringSLAM::Tracker::StereoTracker']]]
+  ['read_0',['read',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a4dcb050dcce2a98d2398a7eddc576794',1,'StringSLAM::Tracker::MonoTracker::read()'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a72d25299479bcf0e0e581c7b7ad5c112',1,'StringSLAM::Tracker::StereoTracker::read(StereoFrame &amp;sf)']]],
+  ['readdepth_1',['readDepth',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a286b0025e7f58da8b79ed94948965857',1,'StringSLAM::Tracker::StereoTracker']]],
+  ['readundistorted_2',['readUndistorted',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a2899a3f094c85bce5f188941c8b8a5ce',1,'StringSLAM::Tracker::MonoTracker']]],
+  ['release_3',['release',['../classStringSLAM_1_1Tracker_1_1MonoTracker.html#a4970eefb4acb4f3d5e5576699bfa65c1',1,'StringSLAM::Tracker::MonoTracker::release()'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#ada9cfd286b358dd0ae6449d9d98619f8',1,'StringSLAM::Tracker::StereoTracker::release()']]],
+  ['residual_4',['residual',['../classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d.html#acf611fb15b1ad10ea8f1d6e70681e16d',1,'StringSLAM::Estimation::Poser::PoseEstimator2d']]]
 ];

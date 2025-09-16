@@ -1,9 +1,8 @@
 #pragma once
 #include "StringSLAM/core.hpp"
 #include <map>
-#
-
 #include "opencv2/core/types.hpp"
+
 namespace StringSLAM
 {
     /**

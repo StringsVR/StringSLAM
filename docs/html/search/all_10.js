@@ -1,6 +1,20 @@
 var searchData=
 [
-  ['t_0',['T',['../structStringSLAM_1_1StereoCameraDistortion.html#ad9bb414cd32f73fac81bb77bf41397e6',1,'StringSLAM::StereoCameraDistortion']]],
-  ['there_20weird_20wrappers_20of_20opencv_20classes_1',['Why are there weird wrappers of OpenCV classes?',['../index.html#autotoc_md2',1,'']]],
-  ['timestamp_2',['timestamp',['../structStringSLAM_1_1Frame.html#ad627c62f7db843cb08b25db82a1891d1',1,'StringSLAM::Frame::timestamp'],['../structStringSLAM_1_1StereoFrame.html#ad45bd9475af77f97496418a269090906',1,'StringSLAM::StereoFrame::timestamp']]]
+  ['setposefromtr_0',['setPoseFromTR',['../structStringSLAM_1_1Frame.html#a641aae6ee77ccdac4255e8eb6c4a34e6',1,'StringSLAM::Frame::setPoseFromTR()'],['../structStringSLAM_1_1StereoFrame.html#a5104aeca9566ef0fcf7a284adef83a7b',1,'StringSLAM::StereoFrame::setPoseFromTR()']]],
+  ['settimestamp_1',['setTimestamp',['../structStringSLAM_1_1Frame.html#a67e515632487d1909e416629fb963cda',1,'StringSLAM::Frame::setTimestamp()'],['../structStringSLAM_1_1StereoFrame.html#a2433de2e4ec6aa4b30fb2facd0858917',1,'StringSLAM::StereoFrame::setTimestamp()']]],
+  ['solvepose2d_5fgn_2',['solvePose2D_GN',['../classStringSLAM_1_1Estimation_1_1Poser_1_1PoseEstimator2d.html#a20765ddf64ecc9177d0109852ace9f3e',1,'StringSLAM::Estimation::Poser::PoseEstimator2d']]],
+  ['stereocameradistortion_3',['StereoCameraDistortion',['../structStringSLAM_1_1StereoCameraDistortion.html',1,'StringSLAM::StereoCameraDistortion'],['../structStringSLAM_1_1StereoCameraDistortion.html#a5fec958abdbe1a67168d8212f8c9caf2',1,'StringSLAM::StereoCameraDistortion::StereoCameraDistortion(cv::Mat R_, cv::Mat T_)'],['../structStringSLAM_1_1StereoCameraDistortion.html#adadc071c7a39208583944de1420da433',1,'StringSLAM::StereoCameraDistortion::StereoCameraDistortion()=default']]],
+  ['stereoframe_4',['StereoFrame',['../structStringSLAM_1_1StereoFrame.html',1,'StringSLAM']]],
+  ['stereosgbmwrapper_5',['StereoSGBMWrapper',['../classStringSLAM_1_1StereoSGBMWrapper.html',1,'StringSLAM::StereoSGBMWrapper'],['../classStringSLAM_1_1StereoSGBMWrapper.html#a5c2ced679e3804de4adc97637e5e0610',1,'StringSLAM::StereoSGBMWrapper::StereoSGBMWrapper()']]],
+  ['stereotracker_6',['StereoTracker',['../classStringSLAM_1_1Tracker_1_1StereoTracker.html',1,'StringSLAM::Tracker::StereoTracker'],['../classStringSLAM_1_1Tracker_1_1StereoTracker.html#a283e7c626db5d2c10f723e1ace3608aa',1,'StringSLAM::Tracker::StereoTracker::StereoTracker()']]],
+  ['stereotracker_2ecpp_7',['StereoTracker.cpp',['../StereoTracker_8cpp.html',1,'']]],
+  ['stereotracker_2ehpp_8',['StereoTracker.hpp',['../StereoTracker_8hpp.html',1,'']]],
+  ['stringify_9',['STRINGIFY',['../CMakeCCompilerId_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringify_5fhelper_10',['STRINGIFY_HELPER',['../CMakeCCompilerId_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringslam_11',['StringSLAM',['../namespaceStringSLAM.html',1,'']]],
+  ['stringslam_3a_3aestimation_12',['Estimation',['../namespaceStringSLAM_1_1Estimation.html',1,'StringSLAM']]],
+  ['stringslam_3a_3aestimation_3a_3aposer_13',['Poser',['../namespaceStringSLAM_1_1Estimation_1_1Poser.html',1,'StringSLAM::Estimation']]],
+  ['stringslam_3a_3afeature_14',['Feature',['../namespaceStringSLAM_1_1Feature.html',1,'StringSLAM']]],
+  ['stringslam_3a_3atracker_15',['Tracker',['../namespaceStringSLAM_1_1Tracker.html',1,'StringSLAM']]],
+  ['system_2ehpp_16',['System.hpp',['../System_8hpp.html',1,'']]]
 ];
